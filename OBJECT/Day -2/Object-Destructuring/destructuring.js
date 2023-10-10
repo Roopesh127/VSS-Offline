@@ -40,3 +40,4 @@ const n = profile.name || "no";
 // const { school } = profile.education
 const { address = "Indore" } = profile
 console.log(address)
+// console.log(profile)
