@@ -1,6 +1,8 @@
 // OBJECT GETTER METHODS
 
-//--> FIRST METHOD => profile[variable] = data
+//--> FIRST METHOD =>
+
+// profile[variable] = data
 // const profile = {};
 
 // function neew(x, y) {
@@ -12,7 +14,9 @@
 // console.log(profile)
 
 
-//--> SECOND METHOD => profile["keyname"] = data
+// --> SECOND METHOD => 
+
+// profile["keyname"] = data
 // profile['name'] = "roopesh";
 // profile['age'] = 22;
 // profile['city'] = "jabalpur"
@@ -47,7 +51,7 @@
 //     captain: "Rohit Sharma"
 // }
 
-// // team[coach] = "viviyan richards"; ->
+// team[coach] = "viviyan richards"; 
 // function add(x, y) {
 //     team[x] = y;
 // }

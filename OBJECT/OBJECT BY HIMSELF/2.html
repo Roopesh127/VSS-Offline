@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+    
+<script>
+
+// Input
+const orders = [
+    { userId: 1,
+      id: 101, 
+      name: "Product A",
+      price: 10 
+    },
+    { userId: 1,
+      id: 102, 
+      name: "Product B", 
+      price: 20 
+    },
+    { userId: 2, 
+      id: 103, 
+      name: "Product C", 
+      price: 15 },
+  ];
+
+  const formattedOrders = orders.map(order =>({
+    orderId : order.id,
+    productName : order.name,
+    price : order.price,
+  }));
+  console.log(formattedOrders)
+  
+ 
+
+  // // Output
+  // const formattedOrders = [
+  //   { 
+  //   orderId: 101, 
+  //   productName: "Product A", 
+  //   price: 10 
+  //   },
+  //   { 
+  //   orderId: 102, 
+  //   productName: "Product B", 
+  //   price: 20 
+  //   },
+  //   { orderId: 103, 
+  //     productName: "Product C", 
+  //     price: 15 },
+  // ];
+
+
+
+
+
+</script>
+
+
+</body>
+</html>
