@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Search and Highlight</title>
+    <style>
+        .highlight {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+
+    <p id="paragraph">
+        This is a sample paragraph. You can search for specific words in this paragraph, and the matching word will be highlighted in yellow.
+    </p>
+
+    <label for="searchTerm">Search Term:</label>
+    <input type="text" id="searchTerm" oninput="highlightSearchTerm()">
+    
+    <script>
+        function highlightSearchTerm() {
+            // Get the search term from the input field
+            var searchTerm = document.getElementById('searchTerm').value;
+            
+            // Reset previous highlights
+            removeHighlights();
+
+            // Check if the search term is not empty
+            if (searchTerm !== '') {
+                // Use window.find() to search for the term
+                var found = window.find(searchTerm, false, false, true, false, true, false);
+
+                // If the term is found, apply the highlight
+                if (found) {
+                    applyHighlight(searchTerm);
+                }
+            }
+        }
+
+        function applyHighlight(searchTerm) {
+            var selection = window.getSelection();
+            var range = selection.getRangeAt(0);
+            var span = document.createElement('span');
+            span.className = 'highlight';
+            range.surroundContents(span);
+        }
+
+        function removeHighlights() {
+            var highlights = document.querySelectorAll('.highlight');
+            highlights.forEach(function (highlight) {
+                var parent = highlight.parentNode;
+                parent.replaceChild(document.createTextNode(highlight.textContent), highlight);
+                parent.normalize();
+            });
+        }
+    </script>
+
+</body>
+</html>

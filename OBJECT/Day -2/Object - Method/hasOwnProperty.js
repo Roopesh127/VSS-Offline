@@ -48,6 +48,6 @@ const profiile = {
 }
 // const resuult = profiile.eduction.school.highersec.hasOwnProperty("eleventh")
 // const resuult = profiile.eduction.college.jobprep.hasOwnProperty("online")
-const resuult = profiile.eduction.school.hasOwnProperty("5")
+const resuult = profiile.eduction.school.hasOwnProperty("0")
 
 console.log(resuult)

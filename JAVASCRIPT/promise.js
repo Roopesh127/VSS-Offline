@@ -10,6 +10,18 @@
 //     console.log("something went wrong")
 // })
 
+new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+        console.log("hello everyone")
+    },600);
+    reject();
+}).then(()=>{
+    console.log("promise is run")
+}).catch(()=>{
+    console.log("promise is failed")
+})
+
+
 // async function runPromise(){
 //  const first = await r1().catch(()=>null);
 //  if(!first){
