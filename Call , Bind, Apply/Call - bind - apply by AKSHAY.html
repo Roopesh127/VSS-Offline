@@ -9,20 +9,130 @@
     <script>
         //call -> function borrowing method
 
-        let name = {
-            firstname : "Roopesh",
-            lastname : "Vishwakarma",
-            printfullName : function(){
-                console.log(this.firstname + " " + this.lastname);
-            }
-        }
-        name.printfullName();
+        // Example-1
 
-        let name2 = {
-            firstname : "Sheetal",
-            lastname : "Awadhiya",
-        }
-        name.printfullName.call(name2);
+        // let name = {
+        //     firstname : "Roopesh",
+        //     lastname : "Vishwakarma",
+        //     printfullName : function(){
+        //         console.log(this.firstname + " " + this.lastname);
+        //     }
+        // }
+        // name.printfullName();
+
+        // let name2 = {
+        //     firstname : "Sheetal",
+        //     lastname : "Awadhiya",
+        // }
+        // name.printfullName.call(name2);
+
+        // Example-2
+
+        // var obj = {name:"piyush"};
+
+        // function sayhello(){
+        //     return "Hello" + this.name;
+        // }
+        // console.log(sayhello.call(obj));
+
+        // Example-3
+     
+        // function sayHello(){
+        //     console.log(`Hello ${this.name} !`);
+        // }
+        // const person = {
+        //     name :"John"
+        // }
+        // sayHello.call(person);
+
+        // Example-4 (Simple Airthmetic method)
+
+        // function MultiplyNumbers(a,b){
+        //     console.log(`Result ${a*b}`);
+        // }
+        // MultiplyNumbers.call(null,3,4)
+
+        // Example - 5 (own example)
+
+        // function PrintYourFullName(){
+        //     console.log(`${this.firstName}  ${this.lastName}`)
+        // }
+        // let obj = {
+        //     firstName : "Roopesh",
+        //     lastName : "Vishwakarma",
+        // }
+        // PrintYourFullName.call(obj);
+
+        // Example - 6
+        
+        // const object = {
+        //     message:"hello world",
+
+        //     getmessage(){
+        //         const messaage = "hello , chotu";
+        //         return this.messaage;
+        //     }
+        // };
+        // console.log(object.getmessage());
+
+        // const obj1 = {
+        //   firstname : "Roopesh",
+        //   lastname : "Vishwakarma",
+        //   age : 23,
+        //   city : "jabalpur",
+
+        //    Fullname(){
+        //      return `${this.firstname} ${this.lastname} ${this.age} ${this.city} ${this.married}`;
+        //   }
+
+        // }
+
+        // const obj2  = {
+        //     firstname : "Pankaj",
+        //     lastname : "Teenwal",
+        //     age : 25,
+        //     city : "Jaipur",
+        // }
+
+        // const obj3 = {
+        //     firstname : "Shubham",
+        //     lastname : "Mishra",
+        //     age : 29,
+        //     city : "Teekamgarh",
+        // }
+        
+        // const obj4 = {
+        //     firstname : "Sachin",
+        //     lastname : "Shrivastava",
+        //     age : 30,
+        //     city : "Gorakhpur",
+        //     married : "yes-married",
+        // }
+        // console.log(obj1.Fullname.call(obj1))
+        // console.log(obj1.Fullname.call(obj2))
+        // console.log(obj1.Fullname.call(obj3))
+        // console.log(obj1.Fullname.call(obj4))
+
+
+
+        // const obj1 = {
+        //   firstname : "Roopesh",
+        //   lastname : "Vishwakarma",
+
+        //    Fullname(){
+        //      console.log(`${this.firstname} ${this.lastname}`);
+        //   }
+        // }
+
+        // const obj2  = {
+        //     firstname : "Pankaj",
+        //     lastname : "Teenwal",
+        // }
+ 
+        // obj2.call(Fullname());
+
+
+
 
 
                         

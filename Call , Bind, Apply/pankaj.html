@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const obj1 = {
+            name : "Roopesh",
+            lastname : "Vishwakarma",
+            age : 23,
+        }
+        const obj2 = {
+            name : "Pankaj",
+            lastname : "Teenwal",
+            age : 25,
+        }
+        const  Fulldetail = ()=>{
+            console.log(this)
+            return `${this.name} ${this.lastname} ${this.age}`;
+        }
+
+        console.log(Fulldetail.call(obj2))
+    </script>
+
+</body>
+</html>
