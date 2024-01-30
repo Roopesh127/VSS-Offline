@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // This keyword in js is special keyword which is refers to object.
+        // And we can not change the value of this.
+
+        // 1. alone this keyword is always refers to Object.(window)
+
+              //  --->  console.log(this)
+
+        // 2. In an object this refers to the Object  
+                //   var firstname = "sachin";
+               const fullname = {
+                firstname : "Roopesh",
+                lastname : "vishwakarma",
+                  fetch : ()=>{
+                    console.log(this.firstname) // undefined
+                  }
+                }
+                fullname.fetch();
+               
+    </script>
+</body>
+</html>
