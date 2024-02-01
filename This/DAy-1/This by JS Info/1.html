@@ -14,17 +14,31 @@
 
               //  --->  console.log(this)
 
-        // 2. In an object this refers to the Object  
+        // 2. Inside Arrow function always return to its lexical, if variable is not present then retun Undefined.
+
                 //   var firstname = "sachin";
-               const fullname = {
-                firstname : "Roopesh",
-                lastname : "vishwakarma",
-                  fetch : ()=>{
-                    console.log(this.firstname) // undefined
-                  }
-                }
-                fullname.fetch();
-               
+              //  const fullname = {
+              //   firstname : "Roopesh",
+              //   lastname : "vishwakarma",
+              //     fetch : ()=>{
+              //       console.log(this.firstname) // undefined
+              //     }
+              //   }
+              //   fullname.fetch();
+
+        // 3. when we are using regular expression of function then it return parent value
+
+        // const Fullname = {
+        //    firstname : "Roopesh",
+        //    lastname : "Vishwakrma",
+
+        //    pooraname : function(){
+        //       console.log(this.firstname + this.lastname)
+        //    }
+        // }
+        // Fullname.pooraname();
+
+        // 4. when we are using strict Mode then it return "undefined"
     </script>
 </body>
 </html>
