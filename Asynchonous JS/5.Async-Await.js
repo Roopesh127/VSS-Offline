@@ -119,14 +119,14 @@
 
 
 
-
-
 // const promise = new Promise((resolve, reject) => {
 //     resolve("hello I am Running");
 //   });
   
-//   (async () => {
+//   const daaaaaata = async () => {
 //     const data = await promise;
 //     console.log(data);
-//   })();
+//   }
+//   daaaaaata();
+
   
