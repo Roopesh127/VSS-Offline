@@ -15,3 +15,24 @@
 //     console.log("Hello I am Annonyous function")  // Hello I am Annonyous function
 // }
 // variable1()
+
+
+
+
+// let area = function(length,width){
+//    return length*width;
+// }
+// let x = area(10,20)
+// console.log(x)
+
+
+
+// ## Use of Annonymous function
+
+function greet(wish){
+    console.log(wish(),"everyone!!")
+}
+greet(function(){
+    return "Good Morning"
+})
+  
