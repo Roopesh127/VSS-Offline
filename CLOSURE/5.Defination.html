@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+    //Closure =>  Function along with it's lexical scope bundled together form a closure.
+
+    //    function x(){
+    //     var a = 7;
+    //     function y(){
+    //         console.log(a)
+    //     }
+    //     y();
+    //    }
+    //    x();
+
+
+
+
+
+    // function x(){
+    //     var a = 12;
+    //     function y(){
+    //         console.log(a);
+    //     }
+    //     return y;
+    // }
+    // let z = x();
+    // console.log(z)   // return function y()
+    
+
+
+
+    
+    // function x(){
+    //     var a = 12;
+    //     function y(){
+    //         console.log(a); // 12
+    //     }
+    //     return y;
+    // }
+    // let z = x();
+    // console.log(z)  // return y function body
+    // z();   // kyunki z ko call karne par x ka output aa ra or x ka output function y hai , isliye ye y() function ko chala kar y ka output 12 return karega.
+
+
+
+
+
+    // function x(){
+    //     var a = 12;
+    //     return function y(){
+    //         console.log(a);
+    //     }
+    // }
+    // let z = x();
+    // console.log(z);
+    // z();
+
+
+
+
+    // function x(){
+    //     var a = 12;
+    //      function y(){
+    //         console.log(a);
+    //     }
+    //     var a = 100;
+    //     return y;
+    // }
+    // let z = x();
+    // console.log(z);
+    // z();
+
+
+    
+
+    // uses of closure :- 
+
+    //    - setTimeout
+    //    - currying
+    //    - memoize
+    //    - maintaing state in async world
+
+    </script>
+</body>
+</html>
