@@ -8,20 +8,41 @@
 <body>
     <script>
 
-     let obj1 = {
-        name : "Roopesh",
-        city : "Jabalpur",
-     }
-     let obj2 = {
-        school : "SDM Gotegaon",
-        college : "SRIT Jabalpur",
-     }
-     obj2.__proto__ = obj1
+    //  let obj1 = {
+    //     name : "Roopesh",
+    //     city : "Jabalpur",
+    //  }
+    //  let obj2 = {
+    //     school : "SDM Gotegaon",
+    //     college : "SRIT Jabalpur",
+    //  }
+    //  obj2.__proto__ = obj1
 
-     console.log(obj2.name) // Roopesh
-     console.log(obj2.city) // Jabalpur
-     console.log(obj2.school) // SDM Gotegaon
-     console.log(obj2.college) // SRIT Jabalpur
+    //  console.log(obj2.name) // Roopesh
+    //  console.log(obj2.city) // Jabalpur
+    //  console.log(obj2.school) // SDM Gotegaon
+    //  console.log(obj2.college) // SRIT Jabalpur
+
+
+
+
+
+    let cow = {
+        leg : 4,
+        propert: "provide milk"
+    }
+    let rabbit = {
+        propert : "timepass",
+        eyes : 2,
+        food : "carrat"
+    }
+    cow.__proto__ = rabbit;
+    // console.log(cow.food)
+    console.log(cow.propert)
+     
+
+
+
 
     </script>
 </body>
