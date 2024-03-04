@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+     let obj1 = {
+        name : "Roopesh",
+        city : "Jabalpur",
+     }
+     let obj2 = {
+        school : "SDM Gotegaon",
+        college : "SRIT Jabalpur",
+     }
+     obj2.__proto__ = obj1
+
+     console.log(obj2.name) // Roopesh
+     console.log(obj2.city) // Jabalpur
+     console.log(obj2.school) // SDM Gotegaon
+     console.log(obj2.college) // SRIT Jabalpur
+
+    </script>
+</body>
+</html>
