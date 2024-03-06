@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // ## Inheritance mean when one object in inherit the property of another object called inheritance. 
+    // ## Like that child parent ki properties le le.
+    // ## Iske liye jo keyword use hota vo hai "extends". "mean child extends parent"
+
+
+    // class Engineer{
+    //     eat(){
+    //         console.log("khana khata hai")
+    //     }
+    //     sleep(){
+    //         console.log("bhai engineer sota bhi haii")
+    //     }
+    // }
+
+
+    // class softwareEngineer extends Engineer{
+    //     work(){
+    //         console.log("software engineer ka kaam software per hota")
+    //     }
+    //     compony(){
+    //         console.log("ye chutiye din bhar baithe baithe computer hi chalate rehte hai");
+    //     }
+    // }
+
+    // class DoctorChutiya extends Engineer{
+    //     work(){
+    //         console.log("whi jo sabhi doctor chutiye karte....mareejon ko loootna .......or koi kaam nahi gandu logo ke pass");
+    //     }
+    // }
+
+    // let apnaFinalSoftwareWalaObject = new softwareEngineer();
+    // // console.log(apnafinalObject);
+
+    // let doctorKaChamcha = new DoctorChutiya();
+    // console.log(doctorKaChamcha)
+
+
+
+
+    // ## Method overriding => kisi chij ko dusri chij ke dwara cover kar lena....example ke liye man lo 
+    //                         jese ek function child class me hai or same parent class me hai to jab ham 
+    //                         class me vo function call karenge to child ka function work karega. yahi method overiding ka concept hai beta.
+
+
+     class ApnabadaChutiya{
+        work(){
+            console.log("chutiyapa karna");
+        }
+        ghumna(){
+            console.log("ham jese chutiya logo ko ghumne ke alawa koin kaam hi nahi hai");
+        }
+     }
+     class chotaChutiya extends ApnabadaChutiya{
+        work(){
+            console.log("thoda kam chutiyapa karta hai apna ye londa");
+        }
+        study(){
+            console.log("ye sab kya hota beta ham ni jante");
+        }
+     }
+    
+     let ChoteChutiyakekaKaand = new chotaChutiya();
+     console.log(ChoteChutiyakekaKaand.work())  // giving self output not parent ------ "thoda kam chutiyapa karta hai apna ye londa"
+     console.log(ChoteChutiyakekaKaand.ghumna())  // giving parent class data . ------ "ham jese chutiya logo ko ghumne ke alawa koin kaam hi nahi hai"
+    </script>
+</body>
+</html>
