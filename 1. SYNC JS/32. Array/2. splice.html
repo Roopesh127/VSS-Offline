@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    // ## We have required to delete element from middle or somewhere place then we are using delete method but this is left these memory there not deleted proper memory only delted element. 
+
+    // let arr = [1,2,3,4,5,6,7,8,9]
+    // delete arr[3]
+    // console.log(arr) // [1, 2, 3, empty, 5, 6, 7, 8, 9]
+
+    // --> To resolve this problem "splice" method is created.
+
+
+
+    // # splice -> It can do anything inside array - insert,remove & replace inside array. 
+      
+
+    // # splice syntax => arr.splice(starting Index[,number how many element deleting from starting , insert 1st element , insert 2nd element , ........... , insert Nth element])
+
+
+    // ---->     In following example I want to delete some element 
+
+    // let arr = ["I","love","lerning","javascript"]
+    // let new1 = arr.splice(1,2)     // mujhe 1st index se 2 element delete karna hai
+    // console.log(arr)               //["I","javascript"]
+
+    // ---->     It's always return delted element's new array.
+
+    // console.log(new1)              //['love', 'lerning']
+
+
+    
+    // ----> If I want to remove some elemet in this place add new element , then it's possible by splice
+
+    // let arr = ["I","love","learning","javascript"]
+    // // I want to remove "love" and "learning" and adding "always","playing" & "with".
+    // let new1 = arr.splice(1,2,"playing","with")
+    // console.log(arr)   // ['I', 'playing', 'with', 'javascript']
+    // console.log(new1)  // ['love', 'learning']
+
+
+
+    // ----> If I want to not delete anything and adding new element 
+
+    // let arr = ["I","love","learning","javascript"]
+    // // I want to update ["I","love","learning","and","playing","with","javascript"]
+    // let new1 = arr.splice(3,0,"and","playing","with")
+    // console.log(arr)  // ['I', 'love', 'learning', 'and', 'playing', 'with', 'javascript']
+    // console.log(new1)  // []  , mean that it's always return new array of updation.
+
+
+
+
+    // ----> It's also working on negative indexing mean that update from back.
+
+    // let arr = [0,1,2,6,7]
+    // let new1 = arr.splice(-1,0,3,4,5)
+    // console.log(arr) // [0, 1, 2, 6, 3, 4, 5, 7]
+    // console.log(new1)  // []
+
+
+  
+    
+
+
+
+    </script>
+</body>
+</html>

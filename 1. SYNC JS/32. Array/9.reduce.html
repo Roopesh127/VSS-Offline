@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+    // ****** We used reduce method when we have required to return single one value from array.******
+    // ****** Summerizing all values in single one value. ******
+
+
+    //  # Syntax 
+
+    // let value = arr.reduce(function(accumulator, item, index, array) {
+    // // ...
+    // }, [initial]);
+
+
+
+
+
+    //  ## With initial value. 
+
+    // let arr = [1,2,3,4,5,6]
+    // let result = arr.reduce((sum,current)=> sum + current , 0)
+    // console.log(result)
+
+
+
+
+    // ## Without initial value.
+
+    // let arr = [1,2,3,4,5,6]
+    // let result = arr.reduce((sum,current)=>sum + current);
+    // console.log(result) 
+
+
+
+
+    //  ## remove duplicate from an array by reduce method 
+
+    //  let arr = [1,1,1,2,4,6,7,7,8,8,,1,11]
+     
+    //  const removeduplicate = arr.reduce((accumulator,item)=>{
+    //     if(!accumulator.includes(item)){
+    //         accumulator.push(item);
+    //     }
+    //     return accumulator;
+    //  },[])
+    //  console.log(removeduplicate)
+
+
+
+
+    // ## Remove duplicate from string 
+
+//     let ytr = "hello GeeksforGeeks"
+//     let str = ytr.split("");
+//     let removeitem = str.reduce((acc,item)=>{
+//         if(!acc.includes(item)){
+//             acc.push(item);
+//         }
+//         return acc;
+//     },[])
+// console.log(removeitem.join(""))   //helo Gksfr
+
+
+    // let ytr = "hello GeeksforGeeks"
+    // let str = ytr.split("");
+    // console.log(str)
+
+
+
+
+    </script>
+</body>
+</html>
