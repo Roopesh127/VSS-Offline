@@ -59,14 +59,14 @@
 
 
 // Q3>
-a()
-function a(){
-   var x = 40
-   let y = 50
-}
+// a()
+// function a(){
+//    var x = 40
+//    let y = 50
+// }
 
-console.log(x)
-console.log(y)
+// console.log(x)
+// console.log(y)
 
 
 // Output
@@ -77,16 +77,52 @@ console.log(y)
 
 // q4>
 
-const d = () =>{
-   var x = 40
-   let y = 50
-}
+// const d = () =>{
+//    var x = 40
+//    let y = 50
+// }
 
-console.log(x)
-console.log(y)
+// console.log(x)
+// console.log(y)
 
 
 // Output
 // 40
 // Reference error
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ########### Again by JS Info ##############
+
+// ----> 01
+
+// let arr = ["Roopesh","Vishwakarma"]
+// const[firstName,LastName] = arr;
+// console.log(firstName)
+// console.log(LastName)
+
+
+
+
+// ----> 02
+
+// let[first,,last] = ["roopesh","kumar","vishwakarma"]
+let[first,,last] = ["roopesh","kumar", , , , , , "vishwakarma"]
+
+console.log(first)
+console.log(last);

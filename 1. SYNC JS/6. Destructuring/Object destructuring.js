@@ -66,3 +66,37 @@
 // getUserInfo(obj)
 
 // 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ######### Object Destructuring ##########
+
+let chutiya = {
+    fname : "naam se hi chutiya",
+    kaam : "chutiyapa karna",
+    reason : "kyunki chutiyapa acha lagta"
+}
+
+let {fname,kaam,reason} = chutiya;
+console.log(fname);
+console.log(kaam);
+console.log(reason);
