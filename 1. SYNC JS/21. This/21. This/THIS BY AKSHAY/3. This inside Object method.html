@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+//    ####################################
+ 
+// function V/S Method :- When any function is created inside any object then it's known as method.
+
+
+
+
+
+ // This is always refer to current object .
+
+//    let user  = {
+//     name : "john",
+//     age : 30
+//    };
+//    user.sayHi = function(){
+//     console.log("hello");
+//    }
+//    sayHi();  // sayHi is not defined
+//    user.sayHi(); // hello
+
+
+
+// let user  = {
+//     name : "john",
+//     age : 30
+//    };
+//    let sayHi = function(){
+//     console.log("hello");
+//    }
+//    sayHi();  // hello
+//    user.sayHi(); // sayHi is not a function
+
+
+
+
+// ## We also can used pre declared function as a method 
+
+// let user = {
+//     name : "john",
+//     age : 30
+// }
+
+// function sayHi(){
+//     console.log("hello");
+// }
+
+// user.sayHi = sayHi;
+// user.sayHi();
+
+
+const a  = 10;
+
+let obj = {
+    fname : "roopesh",
+    // a : 20,
+    add : function(){
+        console.log(this.a)
+    }
+    
+}
+obj.add();
+
+
+
+
+
+
+// In object method this refer to Object.
+
+    </script>
+</body>
+</html>

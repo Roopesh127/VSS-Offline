@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    // Answer :- It's depend on mode. If strict mode then it will return "undefined" & in non-strict mode it's always return window.
+
+
+    // 1. In strict
+
+    //   "use strict"; 
+    //   function x(){
+    //     console.log(this) // undefined
+    //   }
+    //   x();
+
+
+    // 2. Non strict mode
+
+
+        //  function y(){
+        //     console.log(this) // window
+        //  }
+        // y();
+
+
+   
+// Conclusion : -   // If the value of this keyword is undefined or null then 
+                        // this keyword will be replaced with globalObject only in non strict mode.  If strict mode then return undefined.
+
+
+// ###############################
+
+//    --> This value is also depend on How to it's calling  in strict mode.
+   
+    //  1. If it's calling by window.x() , then it return object.
+
+        // "use strict"
+        //  function x(){
+        //     console.log(this)
+        //  }
+        // //  x() // it's return udefined
+        
+        // window.x()  // it's return window object
+
+
+// conclusion :- Inside strict mode function is return undefined but it's also depend how it's called. If it's called by window.x() then return window.
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    // ## There is no This is bound with arrow function. It's always refer enclosing lexical scope value.
+    
+// let   fname =  "kya bolta be";
+// let ajb = {
+
+//  kyahuabhai : function() {
+
+//    let obj = {
+//    fname : "Roopesh",
+//    lname : "Vishwakarma",
+//    add : ()=>{
+//        console.log(this.fname)
+//    }
+// };
+// obj.add();
+// }
+
+// };
+
+// ajb.kyahuabhai();
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const functtion = () => {
+//     let a = 5;
+//     let obj = {
+//         a: 10,
+//         x: function() {
+//             console.log(this.a);
+//         },
+//     };
+//     obj.x();
+// }
+
+// functtion();
+
+
+// let a = 15;
+// const functtion = ()=>{
+//     const  a = 20;
+//     let obj = {
+//     a:10,
+//     x : ()=>{
+//         console.log(this.a)
+//     },
+// };
+// obj.x();
+
+// }
+// functtion();
+
+
+
+// function yyyy(){
+// let a = 15;
+// function add(){
+//     const  a = 20;
+//     let obj = {
+//     a:10,
+//     x : ()=>{
+//         console.log(this.a)
+//     },
+// };
+// obj.x();
+// }
+// add();
+// }
+// yyyy();
+
+
+
+
+// let x = 40;
+// function aaa(){
+//    const  x  = 30;
+//    console.log("a", this)
+//    function bbb(){
+//     const  x = 20;
+//     console.log("b", this)
+//       function ccc(){
+//       const   x = 10;
+//       console.log("c", this)
+//         const add = ()=>{
+//             console.log(this.x)
+//         }
+//         add();
+        
+//       }
+//       ccc();
+//    }
+//    bbb()
+// }
+// aaa()
+
+
+
+
+
+
+// var x = 40;
+// function aaa(){
+//    const  x  = 30;
+//    console.log("a", this)
+//    function bbb(){
+//     const  x = 20;
+//     console.log("b", this)
+//       function ccc(){
+//       const   x = 10;
+//       console.log("c", this)
+//         const add = ()=>{
+//             console.log(this.x)
+//         }
+//         add();
+        
+//       }
+//       ccc();
+//    }
+//    bbb()
+// }
+// aaa()
+
+
+
+
+
+    var a = 10;
+function sub(){
+    console.log(this)
+    let a = 5;
+const add = ()=>{
+    let a = 4;
+    console.log(this.a)
+}
+add();
+
+}
+sub();
+
+
+
+
+
+
+    </script>
+</body>
+</html>
