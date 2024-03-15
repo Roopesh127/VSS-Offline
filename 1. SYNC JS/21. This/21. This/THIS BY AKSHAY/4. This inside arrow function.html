@@ -143,18 +143,266 @@
 
 
 
-    var a = 10;
-function sub(){
-    console.log(this)
-    let a = 5;
-const add = ()=>{
-    let a = 4;
-    console.log(this.a)
-}
-add();
+//     var a = 10;
+// function sub(){
+//     console.log(this)
+//     let a = 5;
+// const add = ()=>{
+//     let a = 4;
+//     console.log(this.a)
+// }
+// add();
 
-}
-sub();
+// }
+// sub();
+
+
+
+
+// let obj = {
+//         name: "pankaj",
+//         lastName : "teenwal",
+//         func: func = ()=>{
+//             console.log("func function this", this)  // window
+
+//             const functionInsideFunc =()=>{
+//                 console.log("functionInsideFuncThis", this) // object
+
+//                 const nestedFunc = ()=>{
+//                     console.log("nestedFuncthis", this)  // object
+//                 }
+
+//                 nestedFunc()
+//             }
+
+//             functionInsideFunc()
+//         }
+//     }
+//     obj.func()
+
+
+
+
+// const obj = {
+//   name: "John",
+//   printName: function() {
+//     console.log(this.name);   // 
+//   }
+// };
+// // obj.printName();
+
+// let print = obj.printName;
+// print();
+
+
+
+
+// const obj = {
+//   name1: "John",
+//   printName: () => {
+//     console.log(this.name1);
+//   }
+// };
+
+// obj.printName();
+
+
+
+// const obj = {
+// name1: "John",
+//  printName: function() {
+//   console.log(this);
+//     function abc() {
+//       console.log(this);
+//     }
+//     abc();
+//   }
+// };
+
+// obj.printName();
+
+
+
+
+// const obj = {
+//   name: "John",
+//   printName: function() {
+//     setTimeout(() => {
+//       console.log(this);
+//     }, 1000);
+//   }
+// };
+
+// obj.printName();
+
+
+
+
+// let user = {
+//   name : "piyush",
+//   age : 24,
+//      getdetails(){
+//       console.log(this.name);
+//      }
+// };
+// user.getdetails();
+
+
+
+
+// let user = {
+//   name1 : "piyush",
+//   age : 24,
+//   getdetails : ()=>{
+//     console.log(this.name1);
+//   }
+// };
+// user.getdetails();
+
+
+
+
+// let user = {
+//   name1 : "piyush",
+//   age : 24,
+//     getDetails(){
+//       const nestedArrow = () => console.log(this.name1);
+//       nestedArrow();
+//     }
+// }
+// user.getDetails();
+
+
+
+
+// function makeUser() {
+//   return {
+//     name: "John",
+//     ref: this
+//   };
+// }
+
+// let user = makeUser();
+
+// alert( user.ref.name ); // What's the result?
+
+
+
+
+// var name1 = "roopesh";
+// const user = {
+//   name1: "piyush",
+//   greet(){
+//     return ` Hello, ${this.name1}!`;
+//   },
+//   farewell : ()=>{
+//     return `Goodbye, ${this.name1}!`;
+//   }
+// };
+// console.log(user.greet());
+// console.log(user.farewell());
+
+
+
+// let name1 = "roopesh";
+// const user = {
+//   name1: "piyush",
+//   greet(){
+//     return ` Hello, ${this.name1}!`;
+//   },
+//   farewell : ()=>{
+//     return `Goodbye, ${this.name1}!`;
+//   }
+// };
+// console.log(user.greet());
+// console.log(user.farewell());
+
+
+
+
+// const user = {
+//   name1: "piyush",
+//   greet(){
+//     return ` Hello, ${this.name1}!`;
+//   },
+//   farewell : ()=>{
+//     return `Goodbye, ${this.name1}!`;
+//   }
+// };
+// console.log(user.greet());
+// console.log(user.farewell());
+
+
+
+
+// let calculator = {
+//   a : 4,
+//   b : 5,
+//   sum(){
+//     return this.a + this.b;
+//   },
+//   mul(){
+//     return this.a * this.b;
+//   },
+// }
+// console.log(calculator.sum());
+// console.log(calculator.mul());
+
+
+
+// var length = 4;
+// function callback(){
+//   console.log(this.length);
+// }
+// const object = {
+//   length : 5,
+//   method(callback){
+//     callback();
+//   }
+// };
+// object.method(callback,1,2)
+
+
+
+
+
+// var length = 4;
+//  function callback() {
+//    console.log(this.length); // What is logged?
+//    }
+//     const object = { 
+//       length: 5,
+//        method() { 
+//         arguments0; 
+//       }
+//      };
+//    object.method(callback, 1, 2);
+
+
+
+
+  
+
+// var calc = {
+//   total : 0,
+//   add(a){
+//     this.total += a;
+//     return this;
+//   },
+//   subtract(a){
+//     this.total -= a;
+//     return this;
+//   },
+//   multiply(a){
+//     this.total *= a;
+//     return this;
+//   }
+// }
+// const result = calc.add(10).multiply(5).subtract(30).add(10)
+// console.log(result.total);
+
+// const result = calc.add(10).multiply(5).subtract(30).add(10)
+// console.log(result.total) 
 
 
 
