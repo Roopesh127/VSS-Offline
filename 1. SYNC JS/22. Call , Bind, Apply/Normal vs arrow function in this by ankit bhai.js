@@ -54,33 +54,33 @@ console.log(
 
 // RESOLVE PROBLEM BY CALL()
 
-var chotiBahu = "Diya";
-var badiBahu = "Roopa";
+// var chotiBahu = "Diya";
+// var badiBahu = "Roopa";
 
-function parents() {
-  function romesh() {
-    console.log("Romesh : Choti Bahu: ", {
-      chotiBahu: this.chotiBahu,
-      badiBahu: this.badiBahu,
-    });
-  }
+// function parents() {
+//   function romesh() {
+//     console.log("Romesh : Choti Bahu: ", {
+//       chotiBahu: this.chotiBahu,
+//       badiBahu: this.badiBahu,
+//     });
+//   }
 
-  const somesh = () => {
-    console.log("Somesh : Badi Bahu: ", {
-      chotiBahu: this.chotiBahu,
-      badiBahu: this.badiBahu,
-    });
-  };
+//   const somesh = () => {
+//     console.log("Somesh : Badi Bahu: ", {
+//       chotiBahu: this.chotiBahu,
+//       badiBahu: this.badiBahu,
+//     });
+//   };
 
-  //romesh();
-  // Kalawa bandh do
-  romesh.call(this);
-  somesh();
+//   //romesh();
+//   // Kalawa bandh do
+//   romesh.call(this);
+//   somesh();
 
-  return "Done";
-}
+//   return "Done";
+// }
 
-console.log(
-  "Mehman Arrives & ask for GFs: ",
-  parents.call({ chotiBahu: "Phoolmati", badiBahu: "Katoridevi" })
-);
+// console.log(
+//   "Mehman Arrives & ask for GFs: ",
+//   parents.call({ chotiBahu: "Phoolmati", badiBahu: "Katoridevi" })
+// );

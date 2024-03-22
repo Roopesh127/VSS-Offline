@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+
+// # By the helping of bind methos we make reusable function.
+
+let obj = {
+        name1 : "Piyush",
+    }
+    function sayHello(age,city){
+        return "Hello" + " " + this.name1 + " " + "is" + " "+ age + " from " + " " + city;
+    }
+let bindfuct = sayHello.bind(obj)
+console.log(bindfuct(23,"Indore"));   
+
+// # By the helping of bind methos we make reusable function.
+console.log(bindfuct(67,"pune"))
+
+</script>

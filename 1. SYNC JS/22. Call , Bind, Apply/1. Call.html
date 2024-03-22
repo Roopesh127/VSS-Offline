@@ -14,33 +14,89 @@
 </html>
 <script>
 
-    var name1 = 'Roopesh';
-    function tryme() {
-        console.log(this.name1)
-    }
-    tryme()
-    // tryme.call({ name1: "rahul" })
+    // # call , bind & apply all are function borrowing technique in javascript.
+// if we want to use one fuction method or variable in other then we are using it.
 
 
 
+// let obj = {
+//     fname : "Roopesh",
+//     lastname : "Vishwakarma",
+// }
+// function fullname (){
+//     return this.fname + this.lastname
+// }
+// console.log(fullname.call(obj))
 
-    // var name1 = 'Roopesh';
-    // const tryme = () => {
-    //     console.log(this.name1)
+
+
+    // function greeting(greet){
+    //     return greet + " " + this.name1;
     // }
-    // // tryme()
-    // tryme.call({ name1: "satyam" })
+    // let user = {
+    //     name1 : "Sachin",
+    // }
+    // console.log(greeting.call(user,"Hello"));
 
 
-    // const person = {
-    //     name: "roopesh",
-    //     greet: function () {
-    //         console.log("hello," + this.name)
-    //     }
-    // };
-    // const anotherperson = {
-    //     name: "satyam"
-    // };
-    // person.greet.call(anotherperson)
+// ----------------------------------------------------------------------------------------------------------------------------------------------------------
+// ----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// call , bind & Apply by Roadsidecoder
+
+
+
+// for without parameter
+
+// var obj = {
+//     name1 : "piyush"
+// }
+// function sayHello(){
+//     return "Hello" +" " + this.name1;
+// }
+// console.log(sayHello.call(obj))
+
+
+
+
+// for giving extra argument
+
+// let obj ={
+//     name1 : "piyush",
+// }
+// function sayHello(age){
+//     return "hello" + " " + this.name1 + " " + "is" + " " + age;
+// }
+// console.log(sayHello.call(obj,24));
+
+
+// for multiple argument 
+
+// let obj = {
+//     name1 : "Piyush",
+// }
+// function sayHello(age,city){
+//     return "Hello" + " " + this.name1 + " " + "is" + " "+ age + " from " + " " + city;
+// }
+// console.log(sayHello.call(obj ,22,"jabalpur"));
+
+
+
+// const obj1 = {
+//             name : "Roopesh",
+//             lastname : "Vishwakarma",
+//             age : 23,
+//         }
+//         const obj2 = {
+//             name : "Pankaj",
+//             lastname : "Teenwal",
+//             age : 25,
+//         }
+//         const  Fulldetail = ()=>{
+//             console.log(this)
+//             return `${this.name} ${this.lastname} ${this.age}`;
+//         }
+
+//         console.log(Fulldetail.call(obj2))
 
 </script>
