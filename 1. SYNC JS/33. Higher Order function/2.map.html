@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+
+//   ## map => map method is used to transform an array. It's higher order function and always return new array.
+
+
+
+const user = [
+    {firstName : "Roopesh" , lastname : "Vishwakarma" , age : 22},
+    {firstName : "Narendra" , lastname : "Modi" , age : 72},
+    {firstName : "Akshay" , lastname : "Saini" , age : 26},
+    {firstName : "Sheetal" , lastname : "Awadhiya" , age : 22},
+]
+
+// // list of fullname
+
+// const result = user.map((e)=> e.firstName + " "  + e.lastname)
+// console.log((result));
+
+
+
+
+// users age should be equal to 72
+
+// console.log(user.map((e)=> {
+//     if(e.age == 72)
+//     return e.firstName;
+//     }
+//     ));
+
+
+
+
+
+// {22 : 2 , 72 : 1 , 26 :1}
+console.log(user.reduce((acc,curr)=>{
+    if(acc[curr.age]){
+      acc[curr.age] = ++ acc[curr.age];
+    }
+    else {
+        acc[curr.age] = 1;
+    }
+    return acc;
+},{}));
+
+
+
+
+
+
+
+
+
+
+
+// const radius = [1,2,3,4];
+
+// const area = function(radius){
+//     return Math.PI * radius * radius;
+// }
+
+// console.log(radius.map(area))
+
+// console.log(radius.map((e)=> (Math.PI * e * e)));
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

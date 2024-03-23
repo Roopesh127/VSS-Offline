@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+     const user = [
+    {firstName : "Roopesh" , lastname : "Vishwakarma" , age : 22},
+    {firstName : "Narendra" , lastname : "Modi" , age : 72},
+    {firstName : "Akshay" , lastname : "Saini" , age : 26},
+    {firstName : "Sheetal" , lastname : "Awadhiya" , age : 22},
+    ]
+
+    console.log(user.filter((e) => e.age < 30 ).map((e)=>e.firstName));
+
+
+    </script>
+</body>
+</html>
