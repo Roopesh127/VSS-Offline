@@ -1,128 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
+      // console.log("start");
+
+      // function importantAction(username){
+      //     setTimeout(()=>{
+      //         return `Subscribe to ${username}`
+      //     },1000);
+      // }
+
+      // const message = importantAction("Roadsidecoder");
+      // console.log(message);
+
+      // console.log("stop");
+
+      // console.log("start");
+
+      // function importantAction(username,cb){
+      //     setTimeout(()=>{
+      //         cb(`Subscribe to ${username}`);
+      //     },5000);
+      // }
+
+      // function likeTheVideo(video,cb){
+      //      setTimeout(()=>{
+      //         cb(`Like the ${video} video`);
+      //     },1000)
+      // }
+
+      // importantAction("Roadsidecoder",function(message){
+      //     console.log(message);
+      // });
+
+      // likeTheVideo("javscript Interview Questions",(action)=>{
+      //     console.log(action);
+      // })
+
+      // console.log("stop");
+
+      ///////////////////////////////////////////////////////////////////////////////////
+
+      // console.log("Start");
+
+      // let pr = new Promise((resolve,reject)=>{
+      //     let result = "succes";
+
+      //     setTimeout(()=>{
+      //         if(result == "succes"){
+      //             resolve()
+      //         }
+      //         else{
+      //             reject()
+      //         }
+      //     },2000)
+      // })
+      // pr.then((res)=>{
+      //     console.log("promise is resolved");
+      // }).catch((rej)=>{
+      //     console.log("promise is rejected");
+      // })
+
+      //console.log(pr);
+
+      ///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+      // let prrr = new Promise((resolve,reject)=>{
+      //     setTimeout(()=>{
+      //         // resolve("hii mai to chal gaya guru");
+      //         reject("mere ko to ye le dooba.......")
+      //     },2000)
+      // })
+      // prrr.then((res,err)=>{
+      //     console.log("promise is resolved",res);
+      //     console.log("promise is rejected",err)
+      // })
+
+      /////////////////////////////////////////////////////////////////////////////////////////////////////
+
+      // new Promise ((resolve,reject)=>{
+      //     setTimeout(()=> reject(1),1000);   /// first
+      // }).then((result)=>{
+      //     console.log(result);;    /// second
+      //     return result * 2 ;
+      // }).catch((err)=>{
+      //     console.log("there is error",err);
+      // }).then((result)=>{
+      //     console.log(result);   /// third
+      //     return result * 4;
+      // }).then((result)=>{
+      //     console.log(result); /// fourth
+      //     return result * 8;
+      // }).catch((err)=>{
+      //     console.log("second error",err);
+      // })
+
+      ///////////////////////////////////////////////////////////////////////////////////////////////////
+
+//       new Promise((resolve, reject) => {
+//         setTimeout(() => resolve(1), 1000);
+//       }).then((result) => {
+//         console.log("bhai mai poore 1 second baad chala", result);
+
+//         return new Promise((chalega, NiChalega) => {
+//           setTimeout(() => chalega(result * 2), 2000);
+//         }).then((result) => {
+//           console.log("bhai mai chal gaya pooore 2 second baad", result);
+
+//           return new Promise((chal, nichal) => {
+//             setTimeout(() => chal(result * 3), 3000);
+//           }).then((result) => {
+//             console.log("bhai mai poore 3 second baad chala", result);
+
+//             return new Promise((resolve, reject) => {
+//               setTimeout(() => resolve(result * 4), 4000);
+//             }).then((result) => {
+//               console.log("bhai mai poore 4 second baad chala ", result);
+//             });
+//           });
+//         });
+//       });
 
 
 
 
-// console.log("start");
+///////////////////////////////////////////////////////////////////////////////////////
 
-// function importantAction(username){
+
+// const asyncronoustask1 = new Promise((resolve,reject)=>{
 //     setTimeout(()=>{
-//         return `Subscribe to ${username}`
-//     },1000);
-// }
+//         resolve("1st promise chal gyi re baba")
+//     }, 1000)
+// })
 
-// const message = importantAction("Roadsidecoder");
-// console.log(message);
+// let asyncronoustask2 = new Promise((resolve,reject)=>{
+//     setTimeout(()=> reject("2nd promise reject ho gyi yrrr"))
+// })
 
-
-// console.log("stop");
-
-
-
-
-
-
-
-// console.log("start");
-
-// function importantAction(username,cb){
-//     setTimeout(()=>{
-//         cb(`Subscribe to ${username}`);
-//     },5000);
-// }
-
-// function likeTheVideo(video,cb){
-//      setTimeout(()=>{
-//         cb(`Like the ${video} video`);
-//     },1000)
-// }
-
-// importantAction("Roadsidecoder",function(message){
-//     console.log(message);
-// });
-
-// likeTheVideo("javscript Interview Questions",(action)=>{
-//     console.log(action);
+// asyncronoustask1.then((res)=>{
+//     console.log(res);
+// }).catch((err)=>{
+//     console.log(err);
 // })
 
 
-// console.log("stop");
+// asyncronoustask2.then((succ)=>{
+//     console.log(succ);
+// }).catch((bahg)=>{
+//     console.log(bahg);
+// })
+ 
 
 
 
+////////////////////////////////////////////////////////////////////////////
 
 
+function asyncTask1(){
+ return   new Promise((resolve,reject)=>{
+        setTimeout(()=> resolve("pehla chal gaya boss"),4000)
+    })
+}
 
-///////////////////////////////////////////////////////////////////////////////////
+function asyncTask2(){
+  return  new Promise((chala,niChala)=>{
+        setTimeout(()=> niChala("ye chutiya tha yrr"),2000)
+    })
+}
 
-console.log("Start");
+asyncTask1().then((suc)=>{
+    console.log("pehli promise fetch ho rahi hai");
+    console.log(suc);
 
-let pr = new Promise((resolve,reject)=>{
-    let result = "succes";
+    asyncTask2().catch((err)=>{
+        console.log("ab dusri promise chalegi jo ki rejected hai");
+        console.log(err);
+    })
 
-    setTimeout(()=>{
-        if(result == "succes"){
-            resolve()
-        }
-        else{
-            reject()
-        }
-    },2000)
 })
-pr.then((res)=>{
-    console.log("promise is resolved");
-}).catch((rej)=>{
-    console.log("promise is rejected");
-})
-
-console.log(pr);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -139,5 +199,5 @@ console.log(pr);
 
 
     </script>
-</body>
+  </body>
 </html>

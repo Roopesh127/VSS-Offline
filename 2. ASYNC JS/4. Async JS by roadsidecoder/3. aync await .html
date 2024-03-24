@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+// let asyncTask1 = new Promise((resolve,reject)=>{
+//     setTimeout(()=> resolve("hello") , 1000)
+// })
+
+// async function functasyncTask1(){
+//     await  asyncTask1;
+// }
+// functasyncTask1();
+
+
+
+
+
+
+
+
+function asyncTask1(dataid){
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            console.log("data",dataid)
+            resolve("success")
+        },2000)   
+    })
+}
+
+async function functAsync(){
+    console.log("data id 1 resolve hoga");
+    await asyncTask1(1);
+    
+    console.log("data id 2 resolve hoga");
+    await asyncTask1(2);
+
+    console.log("data id 3 resolve hoga");
+    await asyncTask1(3)
+}
+functAsync();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
