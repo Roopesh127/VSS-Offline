@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+
+
+// console.log("start");
+
+// function importantAction(username){
+//     setTimeout(()=>{
+//         return `Subscribe to ${username}`
+//     },1000);
+// }
+
+// const message = importantAction("Roadsidecoder");
+// console.log(message);
+
+
+// console.log("stop");
+
+
+
+
+
+
+
+// console.log("start");
+
+// function importantAction(username,cb){
+//     setTimeout(()=>{
+//         cb(`Subscribe to ${username}`);
+//     },5000);
+// }
+
+// function likeTheVideo(video,cb){
+//      setTimeout(()=>{
+//         cb(`Like the ${video} video`);
+//     },1000)
+// }
+
+// importantAction("Roadsidecoder",function(message){
+//     console.log(message);
+// });
+
+// likeTheVideo("javscript Interview Questions",(action)=>{
+//     console.log(action);
+// })
+
+
+// console.log("stop");
+
+
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////
+
+console.log("Start");
+
+let pr = new Promise((resolve,reject)=>{
+    let result = "succes";
+
+    setTimeout(()=>{
+        if(result == "succes"){
+            resolve()
+        }
+        else{
+            reject()
+        }
+    },2000)
+})
+pr.then((res)=>{
+    console.log("promise is resolved");
+}).catch((rej)=>{
+    console.log("promise is rejected");
+})
+
+console.log(pr);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
