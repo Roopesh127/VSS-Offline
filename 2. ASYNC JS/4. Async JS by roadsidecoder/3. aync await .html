@@ -27,32 +27,122 @@
 
 
 
-function asyncTask1(dataid){
-    return new Promise((resolve,reject)=>{
-        setTimeout(()=>{
-            console.log("data",dataid)
-            resolve("success")
-        },2000)   
-    })
-}
+// function asyncTask1(dataid){
+//     return new Promise((resolve,reject)=>{
+//         setTimeout(()=>{
+//             console.log("data",dataid)
+//             resolve("success")
+//         },2000)   
+//     })
+// }
 
-async function functAsync(){
-    console.log("data id 1 resolve hoga");
-    await asyncTask1(1);
+// async function functAsync(){
+//     console.log("data id 1 resolve hoga");
+//     await asyncTask1(1);
     
-    console.log("data id 2 resolve hoga");
-    await asyncTask1(2);
+//     console.log("data id 2 resolve hoga");
+//     await asyncTask1(2);
 
-    console.log("data id 3 resolve hoga");
-    await asyncTask1(3)
-}
-functAsync();
-
-
+//     console.log("data id 3 resolve hoga");
+//     await asyncTask1(3)
+// }
+// functAsync();
 
 
 
 
+// const prrr = new Promise((resolve,reject)=>{
+//     setTimeout(()=> resolve("running promise"),2000)
+// })
+// prrr.then((success)=>{
+//     console.log("succcessssssssssss data ",success );
+// })
+
+// async function Newwww(success){
+//     console.log("success promise", success);
+//     await prrr;
+// }
+// Newwww(success);
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// async await me promises ko handle karne ka tarika 
+
+
+// ------>  only resolve function ke data ko access karne ka tarika
+
+
+
+// function prrrr(){
+//     return new Promise((resolve,reject)=>{
+//         setTimeout(()=>{
+//             // console.log("Ab resolve wala promise chalega");
+//             // resolve("success ho gyi baba promises");
+
+//             console.log("Ab reject wala promise chalega");
+//             reject("Baba ab promise reject ho gyi apni")
+//         },2000)
+//     })
+// }
+// async function Asyncfunction(){
+//     try{
+//         const resolveData = await prrrr();
+//         console.log("resolve data yaha milega",resolveData);
+//     }
+//     catch(error){
+//         console.log("error ka message yaha aayega , ", error);
+//     }
+// }
+// Asyncfunction();
+
+
+
+///////////////////////////////////////////////////////////////////////////////////
+
+
+// const promiiiiiiiiiiiiise = new Promise((resolve,reject)=>{
+//     setTimeout(()=> resolve("successs ho gyi promise"), 2000);
+//     setTimeout(()=> reject("bhai reject ka data"),4000)
+// })
+// async function promiseFUnction(){
+//      try{
+//         const resolveData = await promiiiiiiiiiiiiise;
+//         console.log("yaha resolve promise ka data milta hai guru , ",resolveData);
+//      }
+//      catch(error){
+//         console.log("bhai sidhe udta hua reject ka data directly yaha aa jayega , ", error);
+//      }
+// }
+// promiseFUnction();
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////
+
+// ## By IFFE function 
+
+
+
+
+
+// const promiiiiiiiiiiiiise = new Promise((resolve, reject) => {
+//     setTimeout(() => reject("bhai reject ka data"), 4000)
+// });
+
+// (
+//     async () => {
+//         try {
+//             const resolveData = await promiiiiiiiiiiiiise;
+//             console.log("yaha resolve promise ka data milta hai guru , ", resolveData);
+//         } catch (error) {
+//             console.log("bhai sidhe udta hua reject ka data directly yaha aa jayega , ", error);
+//         }
+//     }
+// )();
 
 
 
@@ -60,7 +150,21 @@ functAsync();
 
 
 
+const promiiiiiiiiiiiiise = new Promise((resolve,reject)=>{
+    setTimeout(()=> reject("bhai reject ka data"),4000)
+});
 
+(
+    async ()=>{
+    try{
+      const resolveData = await promiiiiiiiiiiiiise;
+      console.log("yaha resolve promise ka data milta hai guru , ",resolveData);
+     }
+     catch(error){
+      console.log("bhai sidhe udta hua reject ka data directly yaha aa jayega , ", error);
+     }
+    }
+)();
 
 
 

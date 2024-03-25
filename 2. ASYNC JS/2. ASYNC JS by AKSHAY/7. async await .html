@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    // const p = new Promise((resolve,reject)=>{
+    //     setTimeout(()=>{
+    //         resolve("promise is resolved");
+    //     },2000)
+    // })
+
+    // function promiseSolve(){
+    //     p.then((success)=> console.log("finally",success));
+    //     console.log("Hii shiya");
+    // }
+    // promiseSolve();
+    
+
+    //  output  by .then & .catch .............
+
+    //  ---> Hii shiya
+    //  ---> promise is resolved
+
+
+    // -------------------------------------------------------------------------------------------------------
+
+    // output by async await
+
+    // const p = new Promise((resolve,reject)=>{
+    //     setTimeout(()=>{
+    //         resolve("promise is resolved");
+    //     },6000)
+    // })
+
+    // async function getData(){
+    //     console.log("Hello vss");    // rapidly printed this line.
+    //     const data = await p;
+    //     console.log("hello Roopesh");   // it's synchronous but it's printed after await is resolved mean after 6000 mili second.
+    //     console.log("output data", data);   // it async data. Then after 6 second.
+    //     console.log("hello Shiya");        // it's same as above sereil wise printed.
+
+
+    //     const data2 = await p;
+    //     console.log("Hello data2 ke baad ke pehle bache");
+    //     console.log("hello ddata2 ke bache",data2);
+    //     console.log("ab tum to last ke chutiya to pehle se hi the ");
+    // }
+    // getData();
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+    
+  //  const p = new Promise((resolve,reject)=>{
+    //     setTimeout(()=>{
+    //         resolve("promise is resolved");
+    //     },2000)
+    // })
+
+    // const p1 = new Promise((resolve,reject)=>{
+    //     setTimeout(()=>{
+    //         resolve("promise p1 is resolved");
+    //     },6000)
+    // })
+
+    // async function getData(){
+    //     console.log("Hello vss");    // rapidly printed this line.
+    //     const data = await p;
+    //     console.log("hello Roopesh");   // it's synchronous but it's printed after await is resolved mean after 6000 mili second.
+    //     console.log("output data", data);   // it async data. Then after 6 second.
+    //     console.log("hello Shiya");        // it's same as above sereil wise printed.
+
+
+    //     const data2 = await p1;
+    //     console.log("Hello data2 ke baad ke pehle bache");
+    //     console.log("hello ddata2 ke bache",data2);
+    //     console.log("ab tum to last ke chutiya to pehle se hi the ");
+    // }
+    // getData();
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+    // const p1 = new Promise((resolve,reject)=>{
+    //     setTimeout(()=>resolve("Hii p1 promise is resolved"),20000)
+    // })
+    
+    // const p2 = new Promise((resolved,reject)=>{
+    //     setTimeout(()=> resolved("Hii p2 promise is resolved"),40000)
+    // })
+
+
+    // async function RunningAsync(){
+    //   console.log("bhai mai to sabse pehle resolve hota hu");
+    //   const resolve111 = await p1;
+    //   console.log("Hii I am p1 ke pehle resolve hona hai kyunki sync huuun");
+    //   console.log(resolve111);
+    //   console.log("Hii I am p1 ke baad resolve hona hai kyunki sync huuun");
+
+
+
+    //   const resolve222 = await p2;
+    //   console.log("Hii I am p2 ke pehle resolve hona hai kyunki sync huuun");
+    //   console.log(resolve222);
+    //   console.log("Hii I am p2 ke baad resolve hona hai kyunki sync huuun");
+
+
+    // }
+    // RunningAsync();
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+async function handlePromises(){
+  const fetchData =  await fetch("https://api.github.com/users/Roopesh127")
+  console.log(fetchData.json());
+}
+handlePromises();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

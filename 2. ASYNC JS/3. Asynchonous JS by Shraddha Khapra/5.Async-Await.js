@@ -130,3 +130,26 @@
 //   daaaaaata();
 
   
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////
+
+
+
+const promiiiiiiiiiiiiise = new Promise((resolve,reject)=>{
+    setTimeout(()=> reject("bhai reject ka data"),4000)
+});
+
+(
+    async ()=>{
+    try{
+      const resolveData = await promiiiiiiiiiiiiise;
+      console.log("yaha resolve promise ka data milta hai guru , ",resolveData);
+     }
+     catch(error){
+      console.log("bhai sidhe udta hua reject ka data directly yaha aa jayega , ", error);
+     }
+    }
+)();

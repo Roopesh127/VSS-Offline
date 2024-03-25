@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /// fetch is always return a promise. It's return response object and we required to convert it into a json format to see data.   It's converted data is again a promises.
+
+      async function fetchdata() {
+        try {
+          const dataa = await fetch("https://api.github.com/users/Roopesh127");
+          console.log("Api data output", dataa.json());
+        } catch (error) {
+          console.log("there is some issue in api", error);
+        }
+      }
+      fetchdata();
+    </script>
+  </body>
+</html>
