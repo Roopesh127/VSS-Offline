@@ -1,44 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
+      // First Class Function :- The language said as first class function where function is treated like variables.
+      //                          Mean that we can pass function as an argument ,we can return function from function
+      //                           we are able to perform lots of task by function then this phinomina is called as first class function.
 
-    // First Class Function :- The language said as first class function where function is treated like variables. 
-    //                          Mean that we can pass function as an argument ,we can return function from function
-    //                           we are able to perform lots of task by function then this phinomina is called as first class function.
+      // 1.---> Here we are passing function as a argument.
 
+      // function FirstClass(param1){
+      //     console.log(param1)        // Hello
+      // }
 
+      // function sayhello(){
+      //     return "Hello";
+      // }
+      // FirstClass(sayhello())
 
+      // 2.--->  Here we are returing function from function.
 
-    // 1.---> Here we are passing function as a argument.
+      //   function firstClass(){
+      //     return function xyz(){
+      //        console.log("hello Roopesh")
+      //     }
+      //   }
+      //   console.log(firstClass())     // return whole xyz function
 
-    // function FirstClass(param1){
-    //     console.log(param1)        // Hello
-    // }
-   
-    // function sayhello(){
-    //     return "Hello";
-    // }
-    // FirstClass(sayhello())
+      //  USE CASES OF FIRST CLASS FUNCTION IN JAVASCRIPT :-
 
-    // 2.--->  Here we are returing function from function.
-
-    //   function firstClass(){
-    //     return function xyz(){
-    //        console.log("hello Roopesh")
-    //     }
-    //   }
-    //   console.log(firstClass())     // return whole xyz function
-
-    
-    
- 
-
+      //  - When we are required to store any function.
+      //  - When we have required to pass function as a argument in another function.
+      //  - When we have required to return function from another.
     </script>
-</body>
+  </body>
 </html>

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //  ----> 1. Promise.all()       
+          
+                //  - It's used to handled multiple promises in paallely.
+                //  - It's taken array of promises.
+                //  - And also return array of promises.
+                //  - It will wait for all of them are to finish. Let's understand by one example.
+
+                // Ex.- if we have 3 api and it's comsumed time is . p1(3s),p2(1s),p3(2s) -> then it's give output when all mean 3s api is resolved.
+
+                //  - If anyone of promises is rejected or throw error then it's promise.all() , are also through error and the error is through which error is through by failed promise and error will be Immedietly.
+                // Ex.- if there is above define promises and p2 promise which time is 1 second is throw any error then , it's not waiting to resolving all promise it's suddenly throw error and error is same which is thrown by p2 promises. 
+
+
+                // p1 = new Promise((resolved,reject)=>{
+                //     setTimeout(()=> resolved("promise is resolved"),3000)
+                // })
+                // p2 = new Promise((resolved,reject)=>{
+                //     setTimeout(()=> resolved("promise is resolved"),1000)
+                // })
+                // p3 = new Promise((resolved,reject)=>{
+                //     setTimeout(()=> resolved("promise is resolved"),2000)
+                // })
+
+                // Promise.all([p1,p2,p3]).then((result)=> console.log("promise output result",result))
+
+
+                // output -> after 3 second. ------------------>  promise output result (3) ['promise is resolved', 'promise is resolved', 'promise is resolved']
+
+
+
+
+    //  ->  If I am creating any error inside it then, 
+
+    // const p1 = new Promise((resolve,reject)=>{
+    //     setTimeout(()=> reject("promise is rejected"),3000);
+    // })
+    // const p2 = new Promise((resolve,reject)=>{
+    //     setTimeout(()=> resolve("promise is resolved "),1000);
+    // })
+    // const p3 = new Promise((resolve,reject)=>{
+    //     setTimeout(()=> resolve("promise is resolved"),2000);
+    // })
+    
+    // async function promiseAllreult(){
+    //     try{
+    //         const data = await Promise.all([p1,p2,p3]);
+    //         console.log("output", data);
+    //     }
+    //     catch(error){
+    //        console.log("there is some issue in your asyn task , ",error);
+    //     }
+    // }    
+    // promiseAllreult();
+    
+
+
+
+
+
+
+
+
+       // ---> 2. Promise.allsettled()
+
+        //    - promise.allsettled is work same as promise.all() , but it's waiting to resolving whole array and after resolving it's return output.
+        //    - If there is an error in any promise then it return sequently output but add , there is error and itterate whole array.
+        //    - It's always return array of object.
+
+
+        
+    // const p1 = new Promise((resolve,reject)=>{
+    //     setTimeout(()=> reject("promise is rejected"),3000);
+    // })
+    // const p2 = new Promise((resolve,reject)=>{
+    //     setTimeout(()=> resolve("promise is resolved "),1000);
+    // })
+    // const p3 = new Promise((resolve,reject)=>{
+    //     setTimeout(()=> resolve("promise is resolved"),2000);
+    // })
+    
+    // async function promiseAllreult(){
+    //     try{
+    //         const data = await Promise.allSettled([p1,p2,p3]);
+    //         console.log("output", data);
+    //     }
+    //     catch(error){
+    //        console.log("there is some issue in your asyn task , ",error);
+    //     }
+    // }    
+    // promiseAllreult();
+
+
+
+
+    // ----------------> If all promises are rejected then ,
+
+
+   
+// const p1 = new Promise((resolve,reject)=>{
+//         setTimeout(()=> reject("promise is rejected"),3000);
+//     })
+//     const p2 = new Promise((resolve,reject)=>{
+//         setTimeout(()=> reject("promise is resolved "),1000);
+//     })
+//     const p3 = new Promise((resolve,reject)=>{
+//         setTimeout(()=> reject("promise is resolved"),2000);
+//     })
+    
+//     async function promiseAllreult(){
+//         try{
+//             const data = await Promise.allSettled([p1,p2,p3]);
+//             console.log("output", data);
+//         }
+//         catch(error){
+//            console.log("there is some issue in your asyn task , ",error);
+//         }
+//     }    
+//     promiseAllreult();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       // ---> 3. Promise.race()
+
+       //     - return value of first sattled promises.
+       //     - race mean race, mean that if there is any promise is resolved first then it immedietly return it's output.
+       //     - If output of promises is resolved or reject ,there is no matter.
+
+    //    const p1 = new Promise((resolve,reject)=>{
+    //     setTimeout(()=> reject("promise p1 is rejected"),1000);
+    // })
+    // const p2 = new Promise((resolve,reject)=>{
+    //     setTimeout(()=> resolve("promise p2 is resolved "),9000);
+    // })
+    // const p3 = new Promise((resolve,reject)=>{
+    //     setTimeout(()=> resolve("promise  p3 is resolved"),2000);
+    // })
+    
+    // async function promiseAllreult(){
+    //     try{
+    //         const data = await Promise.race([p1,p2,p3]);
+    //         console.log("output", data);
+    //     }
+    //     catch(error){
+    //        console.log("there is some issue in your asyn task , ",error);
+    //     }
+    // }    
+    // promiseAllreult();
+
+
+
+
+
+
+
+
+       // ---> 4. Promise.any()
+
+       //     - It's return first successful Promises.
+       //     - If there is any first promise which is success then immeadiatly return it's result as output.
+       //     - If all promise are rejected then it will return list of error like [err1,err2,err3], this special type of error is called "Aggregate error".
+
+
+
+    //    const p1 = new Promise((resolve,reject)=>{
+    //     setTimeout(()=> reject("promise p1 is rejected"),3000);
+    // })
+    // const p2 = new Promise((resolve,reject)=>{
+    //     setTimeout(()=> resolve("promise p2 is resolved "),9000);
+    // })
+    // const p3 = new Promise((resolve,reject)=>{
+    //     setTimeout(()=> resolve("promise p3 is resolved"),6000);
+    // })
+    
+    // async function promiseAllreult(){
+    //     try{
+    //         const data = await Promise.any([p1,p2,p3]);
+    //         console.log("output", data);
+    //     }
+    //     catch(error){
+    //        console.log("there is some issue in your asyn task , ",error);
+    //     }
+    // }    
+    // promiseAllreult();
+
+
+
+    //### if all promises are rejected then it's return aggregator error
+
+
+       
+    // const p1 = new Promise((resolve,reject)=>{
+    //     setTimeout(()=> reject("promise p1 is rejected"),3000);
+    // })
+    // const p2 = new Promise((resolve,reject)=>{
+    //     setTimeout(()=> reject("promise p2 is reject "),1000);
+    // })
+    // const p3 = new Promise((resolve,reject)=>{
+    //     setTimeout(()=> reject("promise p3 is reject"),2000);
+    // })
+    
+    // async function promiseAllreult(){
+    //     try{
+    //         const data = await Promise.any([p1,p2,p3]);
+    //         console.log("output", data);
+    //     }
+    //     catch(error){
+    //        console.log("there is some issue in your asyn task , ",error);
+    //     }
+    // }    
+    // promiseAllreult();
+
+
+
+
+    // ######## If we want to error and type then ,,,
+
+    
+       
+    const p1 = new Promise((resolve,reject)=>{
+        setTimeout(()=> reject("promise p1 is rejected"),3000);
+    })
+    const p2 = new Promise((resolve,reject)=>{
+        setTimeout(()=> reject("promise p2 is reject "),1000);
+    })
+    const p3 = new Promise((resolve,reject)=>{
+        setTimeout(()=> reject("promise p3 is reject"),2000);
+    })
+    
+    async function promiseAllreult(){
+        try{
+            const data = await Promise.any([p1,p2,p3]);
+            console.log("output", data);
+        }
+        catch(error){
+           console.log("there is some issue in your asyn task , ",error.errors);  //  ['promise p1 is rejected', 'promise p2 is reject ', 'promise p3 is reject']
+        }
+    }    
+    promiseAllreult();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
