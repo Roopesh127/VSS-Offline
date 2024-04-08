@@ -1,53 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-   
-//    let obj = {
-//     fname : "Roopesh",
-//     lname : "vishwakarma",
-//     age : 23,
-//     education : {
-//         school : "sdm",
-//         college : "srit",
-//     }
-//    }
+      //   let obj = {
+      //     fname: "Roopesh",
+      //     lname: "vishwakarma",
+      //     age: 23,
+      //     education: {
+      //       school: "sdm",
+      //       college: "srit",
+      //     },
+      //   };
 
-//    let new1 = JSON.stringify(obj);
-//    console.log(new1)
+      //   let stringifiedObject = JSON.stringify(obj);
+      //   console.log(stringifiedObject);
 
+      // We can't stringify functions
 
+      const profile = {
+        nameOfSports: "hockey",
+        numberOfPlayers: 15,
+        groundPlayer: function () {
+          let playingPlayer = 11;
+          let benchPlayer = 4;
+        },
+        nationGameOfCountries: {
+          India: true,
+          pakistan: true,
+          germany: false,
+        },
+      };
+      let stringifiedOfPlayerObject = JSON.stringify(profile);
+      console.log(stringifiedOfPlayerObject);
 
-// We can't stringify functions
+      // {"name":"John"}
 
-// const person = {
-//   name: "John",
-//   age: function () {return 30;}
-// };
+      // js Array stringify
 
-// let myString = JSON.stringify(person);
-// console.log(myString)    // {"name":"John"}
+      // const arr = ["John", "Peter", "Sally", "Jane"];
 
-
-
-
-
-// js Array stringify
-
-// const arr = ["John", "Peter", "Sally", "Jane"];
-
-// let myString = JSON.stringify(arr);
-// console.log(myString)
-
-
-
-
-
+      // let myString = JSON.stringify(arr);
+      // console.log(myString)
     </script>
-</body>
+  </body>
 </html>

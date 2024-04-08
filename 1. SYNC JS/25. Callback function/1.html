@@ -1,54 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
+      //  ## Callback function :- When one function takes another function as a argument then another is called callback function.
 
-    //  ## Callback function :- When one function takes another function as a argument then another is called callback function.
-      
+      //    setTimeout(function(){
+      //     console.log("Timer")
+      //    },5000);
+      //    function x(y){
+      //     console.log("x");
+      //    }
+      //    x(function y(){
+      //     console.log("y")
+      //    }());
 
-    //    setTimeout(function(){
-    //     console.log("Timer")
-    //    },5000);
-    //    function x(y){
-    //     console.log("x");
-    //    }
-    //    x(function y(){
-    //     console.log("y")
-    //    }());
+      // output :-   y
+      //             x
+      //             Timer
 
-       
-    // output :-   y
-    //             x 
-    //             Timer
+      // setTimeout(function(){
+      //     console.log("Timer")
+      //    },5000);
+      //    function x(y){
+      //     console.log("x");
+      //     y();
+      //    }
+      //    x(function y(){
+      //     console.log("y")
+      //    });
 
-
-
-
-
-    setTimeout(function(){
-        console.log("Timer")
-       },5000);
-       function x(y){
-        console.log("x");
-        y();
-       }
-       x(function y(){
-        console.log("y")
-       });
-
-    // output :-   x
-    //             y 
-    //             Timer
-
-
-
-
-
+      // output :-   x
+      //             y
+      //             Timer
     </script>
-</body>
+  </body>
 </html>
