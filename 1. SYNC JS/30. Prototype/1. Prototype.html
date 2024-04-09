@@ -1,49 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
+      // Prototype :- when we required to access one object propeties in another object then prototype method is helping us.
 
-    //  let obj1 = {
-    //     name : "Roopesh",
-    //     city : "Jabalpur",
-    //  }
-    //  let obj2 = {
-    //     school : "SDM Gotegaon",
-    //     college : "SRIT Jabalpur",
-    //  }
-    //  obj2.__proto__ = obj1
+      //              " Yeh ek objects ko doosre objects se properties aur methods inherit karne ki anumati dete hain, jo ki code ko zyada efficient aur maintenance-friendly bana sakte hain"
 
-    //  console.log(obj2.name) // Roopesh
-    //  console.log(obj2.city) // Jabalpur
-    //  console.log(obj2.school) // SDM Gotegaon
-    //  console.log(obj2.college) // SRIT Jabalpur
+      //   PRACTICAL USE CASES OF PROTOTYPE :-
 
+      //  - for making custom data structure , like linkelist , stack , queue etc.
+      //  - for making reuseable function , which are using in everywhere.
+      //  - for making framework or library.
+      //  - for making polyfill.
 
+      //  let obj1 = {
+      //     name : "Roopesh",
+      //     city : "Jabalpur",
+      //  }
+      //  let obj2 = {
+      //     school : "SDM Gotegaon",
+      //     college : "SRIT Jabalpur",
+      //  }
+      //  obj2.__proto__ = obj1
 
+      //  console.log(obj2.name) // Roopesh
+      //  console.log(obj2.city) // Jabalpur
+      //  console.log(obj2.school) // SDM Gotegaon
+      //  console.log(obj2.college) // SRIT Jabalpur
 
+      //   let school = {
+      //     name1: "Murlidhar",
+      //     city: "gotegaon",
+      //     schoolDistt: "Narsinghpur",
+      //   };
 
-    let cow = {
-        leg : 4,
-        propert: "provide milk"
-    }
-    let rabbit = {
-        propert : "timepass",
-        eyes : 2,
-        food : "carrat"
-    }
-    cow.__proto__ = rabbit;
-    // console.log(cow.food)
-    console.log(cow.propert)
-     
+      //   let college = {
+      //     collegeName: "SRIT",
+      //     cityc: "Jabalpur",
+      //     CollegeDistt: "Jabalpur",
+      //   };
 
+      //   school.__proto__ = college;
 
+      //   console.log(school.cityc);
 
-
+      // let cow = {
+      //     leg : 4,
+      //     propert: "provide milk"
+      // }
+      // let rabbit = {
+      //     propert : "timepass",
+      //     eyes : 2,
+      //     food : "carrat"
+      // }
+      // cow.__proto__ = rabbit;
+      // // console.log(cow.food)
+      // console.log(cow.propert)
     </script>
-</body>
+  </body>
 </html>
