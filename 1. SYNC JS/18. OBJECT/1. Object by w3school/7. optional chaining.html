@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // USE CASES OF OPTIONAL CHAINING :- Agar app kisi nested object me se koi access karne ki kosis kar
+      //          rahe hai or agar koi value undefined ya null rehti hai to ye hamko
+      //          ek default value de deta hai jo ham set karte.
+      let person = {
+        fname: "Roopesh",
+        lname: "Vishwakarma",
+        college: {
+          bcollege: "srit",
+          mcollege: "MBA college",
+          degree: {
+            bdegree: "B.tech",
+            mdegree: "MBA",
+          },
+        },
+      };
+
+      let optionalChaing =
+        person?.college?.degree?.mdegre || "koi degree ni hai bhai";
+      console.log(optionalChaing);
+    </script>
+  </body>
+</html>

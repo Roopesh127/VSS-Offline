@@ -4,10 +4,15 @@
 // Approch - 1
 
 // let obj = {
-//     fname : "roopesh",
-//     lname : "vishwakarma",
-//     school : "sdm"
-// }
+//   fname: "roopesh",
+//   lname: "vishwakarma",
+//   school: "sdm",
+// };
+
+// let { fname, lname, school } = obj;
+
+// console.log(fname);
+
 // let {fname,lname,school} = obj;
 // console.log(fname)
 // console.log(lname)
@@ -29,11 +34,15 @@
 // Approah --> 3 {by using of rest operator}
 
 // let obj = {
-//     fname : "sachin",
-//     lname : "Shrivastava",
-//     college : "srit",
-//     city : "jabalpur"
-// }
+//   fname: "sachin",
+//   lname: "Shrivastava",
+//   college: "srit",
+//   city: "jabalpur",
+// };
+
+// let { lname, ...rrrreatall } = obj;
+// console.log(lname);
+// console.log(rrrreatall);
 
 // let {fname,...rest} = obj;
 // console.log(fname)
@@ -42,14 +51,16 @@
 // Approach --> 4 {for using of swapping value}
 
 // let obj = {
-//     fname : "sachin",
-//     lname : "Shrivastava",
-//     college : "srit",
-//     city : "jabalpur"
-// }
-// let{fname : lname , lname : fname} = obj;
-// console.log(fname)
-// console.log(lname)
+//   fname: "sachin",
+//   lname: "Shrivastava",
+//   college: "srit",
+//   city: "jabalpur",
+// };
+// // let { fname: lname, lame: fname } = obj;
+// // console.log(lname);
+// let { fname: lname, lname: fname } = obj;
+// console.log(fname);
+// console.log(lname);
 
 // Approach --> 5 {extracts values from properties to function parameter}
 
@@ -65,38 +76,17 @@
 // }
 // getUserInfo(obj)
 
-// 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//
 
 // ######### Object Destructuring ##########
 
-let chutiya = {
-    fname : "naam se hi chutiya",
-    kaam : "chutiyapa karna",
-    reason : "kyunki chutiyapa acha lagta"
-}
+// let chutiya = {
+//   fname: "naam se hi chutiya",
+//   kaam: "chutiyapa karna",
+//   reason: "kyunki chutiyapa acha lagta",
+// };
 
-let {fname,kaam,reason} = chutiya;
-console.log(fname);
-console.log(kaam);
-console.log(reason);
+// let { fname, kaam, reason } = chutiya;
+// console.log(fname);
+// console.log(kaam);
+// console.log(reason);
