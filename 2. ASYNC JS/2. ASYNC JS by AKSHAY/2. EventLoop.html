@@ -1,76 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
+      // ## EventLoop => Event loop is a watcher which are always watch the callstack , if there is callstack are empty then rapidly push asynchronous task in callstack.
 
-    // ## EventLoop => Event loop is a watcher which are always watch the callstack , if there is callstack are empty then rapidly push asynchronous task in callstck. 
-    
+      console.log("start");
 
-
-
-
-
-
-    // console.log("start");
-
-    // setTimeout(function cbT(){
-    //     console.log("CB SetTimeout");
-    // },5000);
-
-    // fetch("https://fakestoreapi.com/products/1")
-    // .then(function cbF(){
-    //     console.log("CB Netflix");
-    // })
-
-    // console.log("End");
-
-
-
-
-
-
-
-    
-
-    // ## For resolving async task there is one callback queue is created . 
-
-    // Callback Queue => Inside callback queue there is all setTimeout & setInterval are come .
-
-    // microtask Queue => Inside microtask queue there is all data is come which is executed after resolved promises. Like that All fetch api(fetch is also take promises or a type of promises) , all promises sequensly.
-
-
-
-    // --->  microtask queue and callback queue both are created parallely but microtask queue done most priority task and after that callback queue task is going to event loop. 
-    // --->  If there is two type of async task one is microtask data and another is callback queue data than , microtask queue data have priority , after execution of all microtask data , callback queue data will be executed.
-    
-        //  1. Callback Queue -> setTimeout , setinterval & all timer async.
-        //  2. microtask Queue -> All data which are resolved by promises. Like fetch api , promises. 
-
-
-
-
-    console.log("start");
-
-    setTimeout(function cbT(){
+      setTimeout(function cbT() {
         console.log("CB SetTimeout");
-    },5000);
+      }, 5000);
 
-    console.log("End");
+      fetch("https://fakestoreapi.com/products/1").then(function cbF() {
+        console.log("CB Netflix");
+      });
 
+      console.log("End");
 
+      // ## For resolving async task there is one callback queue is created .
 
+      // Callback Queue => Inside callback queue there is all setTimeout & setInterval are come .
 
+      // microtask Queue => Inside microtask queue there is all data is come which is executed after resolved promises. Like that All fetch api(fetch is also take promises or a type of promises) , all promises sequensly.
 
+      // --->  microtask queue and callback queue both are created parallely but microtask queue done most priority task and after that callback queue task is going to event loop.
+      // --->  If there is two type of async task one is microtask data and another is callback queue data than , microtask queue data have priority , after execution of all microtask data , callback queue data will be executed.
 
+      //  1. Callback Queue -> setTimeout , setinterval & all timer async.
+      //  2. microtask Queue -> All data which are resolved by promises. Like fetch api , promises.
 
+      //   console.log("start");
 
+      //   setTimeout(function cbT() {
+      //     console.log("CB SetTimeout");
+      //   }, 5000);
 
-
+      //   console.log("End");
     </script>
-</body>
+  </body>
 </html>

@@ -1,4 +1,4 @@
-// Optional chaing is used to safely access nested object property , even if an intermediate object does not exist.
+// Optional chaing is used to safely access nested object property , even if an intermediate object does not exist. It's mainly used when we are working in nested object destructuring.
 
 // optional chaining JavaScript mein ek feature hai jo ECMAScript 2020 (ES11) mein
 // introduce hua hai. Iska istemal object properties or array elements ko access

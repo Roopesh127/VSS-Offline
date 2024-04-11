@@ -1,40 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
+      // #  promises -> we can handle async task by the helping of callback function. But there is two types of problem  1. Pyramid of doom & 2. inversion of control.
 
-//    # promises -> we can handle async task by the helping of callback function. But there is two types of problem  1. Pyramid of doom & 2. inversion of control. 
-        //    jese hi ham promise keyword likhte to ye ek blank object create karta hai , or value undefined show kar deta , jese hi promise ki process hoti mean that promise resolve ya reject hoti uss hisab se value update ho jati hai.
+      //    jese hi ham promise keyword likhte to ye ek blank object create karta hai , or value undefined show kar deta , jese hi promise ki process hoti mean that promise resolve ya reject hoti uss hisab se value update ho jati hai.
 
+      // Defination of Promises => Promises is an object , which is represeting  eventually complition or failure of asynchronous task. It's have three state ;   { 1 - pending ,2 - fullfilled , 3 - rejected. }
 
-        // Defination of Promises => Promises is an object , which is represeting  eventually complition or failure of asynchronous task. It's have three state ;   { 1 - pending ,2 - fullfilled , 3 - rejected. }
-   
+      // const GithubApi = "https://fakestoreapi.com/products/1";
+      // const user = fetch(GithubApi) // It's initially create a blank object and pass value is undefined . In this situation it's called pending condition.
+      // console.log(user);
+      // user.then((data)=>{
+      //    console.log(data);
+      // })
 
-        // const GithubApi = "https://fakestoreapi.com/products/1";
-        // const user = fetch(GithubApi) // It's initially create a blank object and pass value is undefined . In this situation it's called pending condition.
-        // console.log(user);
-        // user.then((data)=>{
-        //    console.log(data);
-        // })
+      //  # fetch is always return a one promises.
 
-//  # fetch is always return a one promises.
+      // ## Way to writing promises :-
 
+      // const promise = createorder(cart);
 
+      // promise.then(function (orderId){
+      //     proceedtopayment(orderId);
+      // });
 
+      //
+      //
+      //
+      //
+      //
+      //
+      //
+      //
+      //
 
-// ## Way to writing promises :-
+      //   const fakestoreApi = fetch("https://fakestoreapi.com/products/1S");
+      //   const data = new Promise((resolve, reject) => {
+      //     resolve(fakestoreApi);
+      //   });
+      //   data
+      //     .then((result) => {
+      //       console.log("promise ka output", result);
+      //     })
+      //     .catch((error) => {
+      //       console.log("bhai api me koi dikkat hai", error);
+      //     });
 
-const promise = createorder(cart);
+      //
+      //
+      //
+      //
 
-promise.then(function (orderId){
-    proceedtopayment(orderId);
-});
-
+      //   const timeSetter = new Promise((resove, reject) => {
+      //     setTimeout(() => {
+      //       reject("hello settimeout");
+      //     }, 2000);
+      //   });
+      //   timeSetter
+      //     .then((success) => {
+      //       console.log("promise is resolved", success);
+      //     })
+      //     .catch((error) => {
+      //       console.log("promises is rejected", error);
+      //     });
+      //
+      //
+      //
+      //
+      //
     </script>
-</body>
+  </body>
 </html>

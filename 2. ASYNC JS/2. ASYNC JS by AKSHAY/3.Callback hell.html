@@ -19,22 +19,38 @@
       //     console.log("season -2 ")
       //    },5000)
 
-    //   const cart = ["kurta", "Pajama", "shirt", "lower"];
+      //   const cart = ["kurta", "Pajama", "shirt", "lower"];
 
-    //   api.createorder(cart, function () {
-    //     api.createPayment(function () {
-    //       api.proceedToPayment(function () {
-    //         api.showordersummaary(function () {
-    //           api.updateBalance(function () {
-    //             api.updateAmmountInAccount();
-    //           });
-    //         });
-    //       });
-    //     });
-    //   });
+      //   api.createorder(cart, function () {
+      //     api.createPayment(function () {
+      //       api.proceedToPayment(function () {
+      //         api.showordersummaary(function () {
+      //           api.updateBalance(function () {
+      //             api.updateAmmountInAccount();
+      //           });
+      //         });
+      //       });
+      //     });
+      //   });
 
-    // # You are seeing in above code the callback inside callback and inside another callback , then our code is increased horizantally. This is called callback hell or pyramid of doom.
-        //   this type of code structure we can't manage easily and if the code base is millons of line then it's like impossible and not understandable to other engineer.
+      // # You are seeing in above code the callback inside callback and inside another callback , then our code is increased horizantally. This is called callback hell or pyramid of doom.
+      //   this type of code structure we can't manage easily and if the code base is millons of line then it's like impossible and not understandable to other engineer.
+
+      setTimeout(() => {
+        console.log("Hello Roopesh");
+        setTimeout(() => {
+          console.log("Hello Adarsh");
+          setTimeout(() => {
+            console.log("Hello ramkrishna");
+            setTimeout(() => {
+              console.log("Hello reetesh");
+              setTimeout(() => {
+                console.log("Hello Sheetal");
+              });
+            });
+          });
+        });
+      });
     </script>
   </body>
 </html>

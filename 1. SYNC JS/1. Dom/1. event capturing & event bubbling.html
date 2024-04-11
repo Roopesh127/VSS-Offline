@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // EVENT CAPTURING :- Event capturing ka mean hota hai ki yadi app dom ke kisi bhi event per yadi
+      //                    click karte hai to event dom root se start hokar decided target tak propogate hota hai. Yahi event capturing kehlata . Mean that uper se niche side.
+
+      //   EVENT BUBBLING  :- Event bubbling ka matlab hota hai ki event  decided target se start hokar root tak propogate hota hai.
+      //                      Mean that bottom to top.
+
+      // -------> Jab ham kisi event par click karte hai to by default event propogation ek process hota hai jisme event by default pehle top to bottom mean event capturing . And after that event bubbling mean botto to top process follow karta hai.
+      // -
+      // -
+      //
+      //   ------->HTML dom me addeventListener function ka use karke event capturing and bubbling ko control kar sakte hai.
+
+      //  element.addEventListener(event , function , usecapture)
+
+      // ---> yaha usecapture function decide karta hai ki event capturing chalega ya event bubbling. yadi use capture true hota hai to capturing mode chalega or yadi false ya undefined hai to bubbling mode chalega.
+    </script>
+  </body>
+</html>
