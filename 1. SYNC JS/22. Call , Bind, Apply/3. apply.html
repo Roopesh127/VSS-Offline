@@ -8,13 +8,29 @@
 <body>
 <script>
 
-    let obj = {
-        name1 : "Piyush",
-    }
-    function sayHello(age,city){
-        return "Hello" + " " + this.name1 + " " + "is" + " "+ age + " from " + " " + city;
-    }
-    console.log(sayHello.apply(obj,[23,"jabalpur"]));
+    // Apply :- Apply method is same as call method but apply is used in place of call where we need to pass argument as a array , in place of single value.
+
+    
+    // function fullName(age,city,college){
+    //     return this.fname + " " +this.lName + " " + age + " " + city + " " + college;
+    // }
+    // let obj ={
+    //     fname : "Roopesh",
+    //     lName : "Vishwakarma"
+    // }
+    
+    // console.log(fullName.apply(obj , [23,"Indore","srit"]));
+    
+    
+    
+    
+    // let obj = {
+    //     name1 : "Piyush",
+    // }
+    // function sayHello(age,city){
+    //     return "Hello" + " " + this.name1 + " " + "is" + " "+ age + " from " + " " + city;
+    // }
+    // console.log(sayHello.apply(obj,[23,"jabalpur"]));
     
     
 </script>

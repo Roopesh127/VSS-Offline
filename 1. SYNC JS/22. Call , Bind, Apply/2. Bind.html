@@ -1,31 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
-
-</body>
-
+  <body></body>
 </html>
 <script>
+  // # By the helping of bind methos we make reusable function.
 
-// # By the helping of bind methos we make reusable function.
+  // Bind :- Bind method ka use following cases me kiya jata hai :-
+  //           - jb ham ek function ko kisi dusre function ke andar dalte hai , to dusre function ke context ko pehle function ke context ke sath bind kar dete hai.
+  //           - Callback functions ko pass karte waqt, unka context aksar lost ho jata hai. Bind method ka istemal karke aap unka context set kar sakte hain.
 
-let obj = {
-        name1 : "Piyush",
-    }
-    function sayHello(age,city){
-        return "Hello" + " " + this.name1 + " " + "is" + " "+ age + " from " + " " + city;
-    }
-let bindfuct = sayHello.bind(obj)
-console.log(bindfuct(23,"Indore"));   
+  //   let obj = {
+  //     name1: "Piyush",
+  //   };
+  //   function sayHello(age, city) {
+  //     return (
+  //       "Hello" + " " + this.name1 + " " + "is" + " " + age + " from " + " " + city
+  //     );
+  //   }
+  //   let bindfuct = sayHello.bind(obj);
+  //   console.log(bindfuct(23, "Indore"));
+  //   console.log(bindfuct(67, "pune"));
 
-// # By the helping of bind methos we make reusable function.
-console.log(bindfuct(67,"pune"))
+  //
+  //
+  //
+  //
 
+  //   const person = {
+  //     fname: "Sachin",
+  //     lname: "Tendulkar",
+  //     getfullName: function () {
+  //       return this.fname + " " + this.lname;
+  //     },
+  //   };
+
+  //   const fullName = function () {
+  //     console.log("FULLNAME:", this.getfullName());
+  //   };
+
+  //   const NewbindFunction = fullName.bind(person);
+  //   NewbindFunction();
+
+  //
+  //
+  //
+  //
+  //
+
+  // const person = {
+  //     name: 'John',
+  //     greet: function() {
+  //         console.log('Hello, ' + this.name + '!');
+  //     }
+  // };
+
+  // function sayHello() {
+  //     console.log('Inside sayHello:', this.name);
+  // }
+
+  // // 'sayHello' function ko 'person' object ke sath bind karne ka example
+  // const boundSayHello = sayHello.bind(person);
+
+  // // Ab 'boundSayHello' ko call karte waqt, 'sayHello' function ka 'this' context 'person' object ke andar hoga
+  // boundSayHello(); // Output: Inside sayHello: John
+
+  //
+  //
+  //
+  //
+  //
+  //
+  // - When function is using as a callback then it's lost his this context , there we can used bind method.
+
+  let obj = {
+    fname: "roopesh",
+    lname: "vishwakarma",
+    fullname: function () {
+      console.log(this.fname + " " + this.lname);
+    },
+  };
+  setTimeout(obj.fullname, 2000); // it's return undefined
+  setTimeout(obj.fullname.bind(obj)); // roopesh Vishwakarma
 </script>

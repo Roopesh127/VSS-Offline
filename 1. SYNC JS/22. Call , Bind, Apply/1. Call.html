@@ -1,102 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
-
-</body>
-
+  <body></body>
 </html>
 <script>
+  // # call , bind & apply all are function borrowing technique in javascript.
+  // if we want to use one fuction method or variable in other then we are using it.
 
-    // # call , bind & apply all are function borrowing technique in javascript.
-// if we want to use one fuction method or variable in other then we are using it.
+  // let obj = {
+  //     fname : "Roopesh",
+  //     lastname : "Vishwakarma",
+  // }
+  // function fullname (){
+  //     return this.fname + this.lastname
+  // }
+  // console.log(fullname.call(obj))
 
+  // function greeting(greet){
+  //     return greet + " " + this.name1;
+  // }
+  // let user = {
+  //     name1 : "Sachin",
+  // }
+  // console.log(greeting.call(user,"Hello"));
 
+  // ----------------------------------------------------------------------------------------------------------------------------------------------------------
+  // ----------------------------------------------------------------------------------------------------------------------------------------------------------
 
-// let obj = {
-//     fname : "Roopesh",
-//     lastname : "Vishwakarma",
-// }
-// function fullname (){
-//     return this.fname + this.lastname
-// }
-// console.log(fullname.call(obj))
+  // call , bind & Apply by Roadsidecoder
 
+  // for without parameter
 
+  // var obj = {
+  //     name1 : "piyush"
+  // }
+  // function sayHello(){
+  //     return "Hello" +" " + this.name1;
+  // }
+  // console.log(sayHello.call(obj))
 
-    // function greeting(greet){
-    //     return greet + " " + this.name1;
-    // }
-    // let user = {
-    //     name1 : "Sachin",
-    // }
-    // console.log(greeting.call(user,"Hello"));
+  // for giving extra argument
 
+  // let obj ={
+  //     name1 : "piyush",
+  // }
+  // function sayHello(age){
+  //     return "hello" + " " + this.name1 + " " + "is" + " " + age;
+  // }
+  // console.log(sayHello.call(obj,24));
 
-// ----------------------------------------------------------------------------------------------------------------------------------------------------------
-// ----------------------------------------------------------------------------------------------------------------------------------------------------------
+  // for multiple argument
 
-// call , bind & Apply by Roadsidecoder
+  // let obj = {
+  //     name1 : "Piyush",
+  // }
+  // function sayHello(age,city){
+  //     return "Hello" + " " + this.name1 + " " + "is" + " "+ age + " from " + " " + city;
+  // }
+  // console.log(sayHello.call(obj ,22,"jabalpur"));
 
+  const obj1 = {
+    name: "Roopesh",
+    lastname: "Vishwakarma",
+    age: 23,
+  };
+  const obj2 = {
+    name: "Pankaj",
+    lastname: "Teenwal",
+    age: 25,
+  };
+  const Fulldetail = () => {
+    console.log(this);
+    return `${this.name} ${this.lastname} ${this.age}`;
+  };
 
-
-// for without parameter
-
-// var obj = {
-//     name1 : "piyush"
-// }
-// function sayHello(){
-//     return "Hello" +" " + this.name1;
-// }
-// console.log(sayHello.call(obj))
-
-
-
-
-// for giving extra argument
-
-// let obj ={
-//     name1 : "piyush",
-// }
-// function sayHello(age){
-//     return "hello" + " " + this.name1 + " " + "is" + " " + age;
-// }
-// console.log(sayHello.call(obj,24));
-
-
-// for multiple argument 
-
-// let obj = {
-//     name1 : "Piyush",
-// }
-// function sayHello(age,city){
-//     return "Hello" + " " + this.name1 + " " + "is" + " "+ age + " from " + " " + city;
-// }
-// console.log(sayHello.call(obj ,22,"jabalpur"));
-
-
-
-// const obj1 = {
-//             name : "Roopesh",
-//             lastname : "Vishwakarma",
-//             age : 23,
-//         }
-//         const obj2 = {
-//             name : "Pankaj",
-//             lastname : "Teenwal",
-//             age : 25,
-//         }
-//         const  Fulldetail = ()=>{
-//             console.log(this)
-//             return `${this.name} ${this.lastname} ${this.age}`;
-//         }
-
-//         console.log(Fulldetail.call(obj2))
-
+  console.log(Fulldetail.call(obj2));  // Arrow function me this ka concept nahi hota
 </script>
