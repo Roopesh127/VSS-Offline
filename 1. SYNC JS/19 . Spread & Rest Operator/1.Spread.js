@@ -1,3 +1,5 @@
+// Spread Operator :-
+
 // ---> 1. using for making copy.
 
 // let num = [1,2,3,4,5]
@@ -20,4 +22,4 @@
 // let obj = "hello";
 // console.log({...obj})
 
-// ---> 
+// --->

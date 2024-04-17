@@ -1,14 +1,16 @@
-// Array destructuring 
+// Array destructuring :- Destructuring is a method in js where we can access array and object data inside one variable.
 
 // ---> 01
 
-// let arr = ["Roopesh","Sachin","Vishal","Pankaj"];
+// let arr = ["Roopesh", "Sachin", "Vishal", "Pankaj"];
 
-// let a = arr[1];
-// console.log(a)
+// let a = arr[3];
+// console.log(a);
 
 // const[a,b] = arr;
-// console.log(a)
+// const [a, , , b] = arr;
+// console.log(a);
+// console.log(b);
 
 // ---> 02
 
@@ -25,23 +27,19 @@
 // let[one , ...rest] = arr;
 // console
 
-
-
-
 // Q1>
 
-// getColor() 
-// function getColor(){ 
+// getColor()
+// function getColor(){
 // console.log("blue")
 //  }
 
-// console.log(x) 
+// console.log(x)
 // var x =4
 
 // Output
 // ”Blue”
 // 4
-
 
 // Q2>
 // {
@@ -52,11 +50,9 @@
 // console.log(x)
 // console.log(y)
 
-
-// Output :- 
+// Output :-
 // 40
 // Reference error
-
 
 // Q3>
 // a()
@@ -68,12 +64,9 @@
 // console.log(x)
 // console.log(y)
 
-
 // Output
 // 40
 // 50
-
-
 
 // q4>
 
@@ -85,27 +78,9 @@
 // console.log(x)
 // console.log(y)
 
-
 // Output
 // 40
 // Reference error
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // ########### Again by JS Info ##############
 
@@ -116,13 +91,10 @@
 // console.log(firstName)
 // console.log(LastName)
 
-
-
-
 // ----> 02
 
 // let[first,,last] = ["roopesh","kumar","vishwakarma"]
-let[first,,last] = ["roopesh","kumar", , , , , , "vishwakarma"]
+// let[first,,last] = ["roopesh","kumar", , , , , , "vishwakarma"]
 
-console.log(first)
-console.log(last);
+// console.log(first)
+// console.log(last);

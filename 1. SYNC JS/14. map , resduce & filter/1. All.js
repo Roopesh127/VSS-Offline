@@ -13,7 +13,7 @@
 // let x = arr.filter((x)=>x>3)
 // console.log(x)
 
-// reduce method :- We we have required to colled one value of multi value array then we are using reduce method and it's always rotate on each element of an array and return one value. It's take one accumulator value , if we are not provide accumulator then it's by default use first value as a accumulator.
+// reduce method :- We we have required to collect one value of multi value array then we are using reduce method and it's always rotate on each element of an array and return one value. It's take one accumulator value , if we are not provide accumulator then it's by default use first value as a accumulator.
 
 let arr = [1, 2, 3, 4, 5, 6];
 let x = arr.reduce((acc, item) => (acc + item) / item);

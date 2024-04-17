@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   let arr = [1, 2, 3, 4, 5, 6];
+      //   const [a, ...b] = arr;
+      //   console.log(a); //1
+      //   console.log(b); //[2,3,4,5,6]
+
+      //   let prr = new Promise((resolve, reject) => {
+      //     setTimeout(() => {
+      //       console.log("hello Team");
+      //     });
+      //   });
+      //   console.log(prr);
+      //
+      //
+      //
+      //  TDZ
+      //   console.log(x); // undefined
+      //   console.log(y);
+      //   console.log(z);
+      //   var x = 2;
+      //   let y = 5;
+      //   const z = 10;
+      //   console.log(x);
+      //   console.log(y);
+      // console.log(z);
+      //
+      //
+      //
+
+      function createCounter() {
+        let count = 0;
+        function increase() {
+          count++; /// 1
+        }
+        let message = `Count is ${count}`;
+
+        function log() {
+          console.log(message);
+        }
+        return [increase, log];
+      }
+
+      const [increase, log] = createCounter();
+      increase(); // 1
+      increase(); // 2
+      increase(); // 3
+      log(); // Count is  3
+    </script>
+  </body>
+</html>
