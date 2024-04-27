@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .main-container {
+        background-color: aquamarine;
+        border: solid 3px black;
+
+        display: flex;
+        flex-direction: column;
+      }
+      .main-container div {
+        background-color: rgb(160, 44, 79);
+        border-radius: 5px solid silver;
+        height: 100px;
+        flex: 1 1 auto;
+      }
+      /* .main-container .two {
+        flex: 2 1 0%;
+      } */
+    </style>
+  </head>
+  <body>
+    <!-- 
+// flexbox :- flexbox isa away to arrange item into rows or coloumn.
+// Flex container :- flex container is a element , over which we aplied flex property.
+// flex item :- flex item is a content inside flex container.
+//
+//
+//
+// flex : 1;
+// this 1 is applied on grow property , mean that flex grow : 1.
+//  mean that {flex grow : 1 , flex shrink : 1 , flex basis : 0}
+// 
+//
+ //
+// flex position is by default is row. But if we are applying the property of coloumn then it's coloumn.
+//
+//
+// flex container have following properties are :- 
+ 1. flex-direction :- apply in main axis. row,row-reverse,coloumn,coloumn-reverse.
+ 2.flex-wrap  :- when content is not able to fit in one line. nowrap , wrap , wrap-reverse.
+ 3.justify-content :- to give extra space in main axis. flex-start,flex-end,center,space-between,space-around,space-evenly.
+ 4.align-item :- determine how items laid on the cross axis. center , flex-start,flex-end,baseline,stretch.
+ 5.align-content :- only has an affect only more than one line of content. flex-start , flex-end , center , space-arround , space-between , stretch. 
+//
+//
+//
+
+What is the difference between justify-content and align-items?
+// => justify-content is control alignment in main axis.  & align-item control content in cross axis.
+//
+//
+What’s the difference between justify-content: space-between and justify-content: space-around?
+// => space-around = __a__b__c
+// => space-between = a__b__c
+ -->
+
+    <!-- Visualization :- https://flexbox.malven.co/ -->
+
+    <div class="main-container">
+      <div style="background-color: blueviolet" class="one"></div>
+      <div style="background-color: chartreuse" class="two"></div>
+      <div style="background-color: cornflowerblue" class="three"></div>
+    </div>
+  </body>
+</html>
