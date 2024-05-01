@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>The title of your web page</h1>
+    <div id="container"></div>
+</body>
+<script>
+// 1 :- 
+// const container = document.querySelector("#container")
+// // console.log(container);
+// const newElement = document.createElement("roopesh") //1 - create new element
+
+// newElement.classList.add("newClass") // 2- create new class which name is "newClass"
+
+// newElement.textContent = "Hello roopesh it's new created element inside div" // 3- Adding text in this new element
+
+// container.appendChild(newElement) //4- after append container 
+
+// console.log(container); // 5- see it , it's added or not
+
+// output :- 
+
+// <body>
+//   <h1>THE TITLE OF YOUR WEBPAGE</h1>
+//   <div id="newClass">
+//     <roopesh class="content"> Hello roopesh it's new created element inside div </roopesh>
+//   </div>
+// </body>
+
+// 2:- 
+
+let createP = document.createElement("p")
+createP.textContent = "Hey I’m red!";
+createP.style.color = "red";
+let getContainer = document.getElementById("container");
+let data = getContainer.appendChild(createP);
+console.log("data", data)
+</script>
+</html>

@@ -1,4 +1,5 @@
-// Spread Operator :-
+// Spread Operator :- copies array element into another array or object.
+// Rest operator :- collecting all remaining parameters from functions
 
 // ---> 1. using for making copy.
 

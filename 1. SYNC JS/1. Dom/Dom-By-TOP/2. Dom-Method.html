@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+
+// When nodes are parsed by web browser so inside node there are severals of methods inside node.
+// these properties or methods are primary tools we are going to manipulate our page with javascript.
+
+
+
+// There are following methods and use cases:- 
+
+// 1.- Query selectors :-> using for selecting element inside webpage.
+
+     //- element.querySelector(selector) :- return a refrence to the first match of selector.
+     //- element.querySelectorAll(selectors) :- returss containg refrences to all the matches of selectors.  
+                                            //  remember that querySelectorAll value is not a array , It is "nodelist" but it's treating like an array. If any problem is arrised the you can convert it an array by the using  Array.from() or using spread operators.
+
+// 2.- Element creations :-> for creating element in memory of web page not in dom.
+
+     //- document.createElement(tagName,[options]) :- document.createElement("div") ---> Remember that this function is not create element inside dom it's create memory , by the helping of it you can manuplating with element by styles , classes , ids , text etc. 
+
+
+// 3.- Append element :-> to adding new element inside web page.
+
+     //- parentNode.appendChild(childNode) :- for adding last node in parent node
+
+     //- parentNode.insertBefore(newNode,refrenceNode) :- for adding new node into parent node before refrenceNode.
+
+// 4.- Remove element :-> using to removing child element.
+    
+     //- parentNode.removeChild(child) :- remove child from parentNode on th DOM and return refrence to the child.
+
+// 5.- Altering(changing) elements :- When we have refrence to the element and we want to change properties of this perticular element like changing class , changing style ,
+                                   // adding or removing attributes , adding inline style information and more . There we are using Altering element.
+
+     // Ex:-
+        // const diiv = document.createElement("div");
+      
+     // - Adding inline :- 
+          //  div.style.color = "blue";
+          // div.style.cssText = "color : blue ; background : white;";
+          //  div.setAttribute("style","color : blue ; background : white;");
+          // console.log(div);
+
+
+
+     // - Editing Attribute :- 
+      
+           // Example:- 
+             // if id exist then update it by "theDiv" or if not available then create by new id by name of "theDiv" 
+                // diiv.setAttribute("id","theDiv");
+               
+             // return value of specified attribute in this case "thediv"
+                // diiv.getAttribute("id")
+
+             // remove specified attribute
+                // diiv.removeAttribute("id")
+
+   
+     // - Working with class :- 
+      
+           // Example:- 
+             // if we required to add new class in element , {classname = "newClass"} 
+                // diiv.classList.add("newClass")
+               
+             // if we required to remove perticular class from element
+                // diiv.classList.remove("newClass")
+
+             // if diiv have class "newClass" then remove it , if haven't then add it
+                // diiv.classList.toggle("newClass")
+
+
+     
+     // - Adding Text content :- 
+      
+           // Example:- 
+            //  diiv.textContent = "hello world!!!"
+
+     
+     // - Adding HTML element :- 
+      
+           // Example:- 
+             diiv.innerHTML = "<span> hello world !</span>"  
+console.log(diiv);
+
+</script>    
+</body>
+</html>

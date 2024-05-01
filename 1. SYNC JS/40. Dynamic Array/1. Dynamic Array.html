@@ -7,14 +7,46 @@
   </head>
   <body>
     <script>
-      function dynamicArray(NumberOfCount) {
-        let arr = [];
-        for (let i = 0; i <= NumberOfCount; i++) {
-          arr.push(i);
-        }
-        return arr;
-      }
-      console.log(dynamicArray(10));
+      ///---> dynamic array by loop
+
+      //   function dynamicArray(NumberOfCount) {
+      //     let arr = [];
+      //     for (let i = 0; i <= NumberOfCount; i++) {
+      //       arr.push(i);
+      //     }
+      //     return arr;
+      //   }
+      //   console.log(dynamicArray(10));
+
+      //
+      //
+      // ----> By using from method
+
+      //   function dynamicArrayByfromMethod(start, end) {
+      //     let new1 = Array.from(
+      //       { length: end - start + 1 },
+      //       (_, index) => start + index
+      //     );
+      //     return new1;
+      //   }
+      //   console.log(dynamicArrayByfromMethod(8, 12));
+
+      //
+      //
+      //
+      //
+      //----> by fill method
+
+      //   function ArraybyFillMethod(length, defaultValue) {
+      //     let new1 = Array(length).fill(defaultValue);
+      //     return new1;
+      //   }
+      //   console.log(ArraybyFillMethod(5, 2));
+
+      //-----> constructor method
+
+      const arr = Array(2);
+      console.log(arr);
     </script>
   </body>
 </html>

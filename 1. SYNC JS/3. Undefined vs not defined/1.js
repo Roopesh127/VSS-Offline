@@ -1,8 +1,7 @@
-// ## If any variable have memory than it's "undefined" , but if It's have no memory than 
+// ## If any variable have memory than it's "undefined" , but if It's have no memory than
 //    it's return not defined.
 
-// ## javascript me variable ka naame likhte hi memory assign h jati hasMatchFunction.
-
+// ## javascript me variable ka naame likhte hi memory assign h jati hai.
 
 // var a;
 // console.log(a)  // undefined
