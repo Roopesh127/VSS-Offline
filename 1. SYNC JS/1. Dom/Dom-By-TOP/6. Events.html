@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+ <!-- Events :- Javascript events are actions. That is , if user clicking on a button  and perfomed any actions.    -->
+
+ <!-- we can use html event by 3 types:- -->
+
+  <!-- 1.- directly using event function in html element. -->
+       <!-- <button onclick="alert('Hello Roopesh')">Click Me</button> -->
+
+
+
+       <!-- -> By using of function :-  -->
+       <!-- <button onclick="alertFunction()">Click me Sirrrrrrrrrrr</button>
+       <script>
+          function alertFunction(){
+            alert("Hello Sir , How are you ?")
+          }
+       </script> -->
+
+
+  <!-- 2.- set properties like "onclick" or "onchange". -->
+
+       <!-- <button id="btn">Click Me Bro</button>
+       <script>
+         let getButton = document.querySelector("#btn");
+         getButton.onclick = () => alert("Hello Roopesh!!")
+       </script> -->
+
+
+
+        <!-- by using function  -->
+           <!-- <button id="btn">Click me , I am Run by separate function</button>
+             <script>
+                function alertFunction(){
+                  alert("Hello Roopesh !!!!!!! I am performed by separate function")
+                }
+                let gettingButton = document.querySelector("#btn")
+              
+             </script> -->
+
+
+ <!-- 3.- Attach eventListner to the DOM node. -->
+ 
+       <!-- <button id="btn">Click me Roopesh !!!!</button>
+       <script>
+          let getRoopeshButton = document.querySelector("#btn");
+           getRoopeshButton.addEventListener("click",()=> alert("Hello Roopesh, kya baat hai"))
+        //    getRoopeshButton.addEventListener("click",()=> alert("Hello Shiya, kya baat hai"))
+
+       </script> -->
+<!--      
+        <button id="btn">Click me , I am Run by separate function</button>
+             <script>
+                function alertFunction(){
+                  alert("Hello Roopesh !!!!!!! I am performed by separate function")
+                }
+                btn.addEventListener("click",alertFunction);
+              
+             </script> -->
+
+
+ <!-- # Attaching Listener to group of nodes :- There are many methods.
+
+1. addEventListener :-  addEventListener is a function which is allow us to attach event handler with events.  -->
+
+<!-- <div class="container">
+<button id="1"> Click me 1</button>
+<button id="2"> Click me 2</button>
+<button id="3"> Click me 3</button>
+</div>
+
+<script>
+const buttonsData = document.querySelectorAll("button");
+buttonsData.forEach((e)=>{
+  e.addEventListener("click",()=> alert(e.id))
+});
+</script> -->
+<!-- 
+
+2. click
+
+
+3. dbclick
+
+
+4. keydown
+
+
+5. keyup -->
+
+
+</body>
+</html>

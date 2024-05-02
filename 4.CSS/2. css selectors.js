@@ -51,7 +51,7 @@ const { useSelector } = require("react-redux");
 
 //# By the content of Odin Project :-
 
-// 1.universal useSelector :- select all content of web page
+// 1.universal Selector :- select all content of web page
 
 // 2.type selector :- select all content of same type
 
