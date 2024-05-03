@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<button id="btn1">Button-1</button>
+<button id="btn2">Button-2</button>
+<button id="btn3">Button-3</button>
+<script>
+
+// currying :- currying is a technique which simplified the function by converting chain of function and each chain take single parameter.
+
+// -> matlab bhai currying ek technique hai jo function ko small small part me tod kr ek chain banati hai phir uski har function me single parameter return karati.
+
+
+// function addByCurrying(a){
+//      return function(b){
+//         return function(c){
+//            return function(d){
+//                 return a+b+c+d;
+//             }
+//         }
+//     }
+// }
+// console.log(addByCurrying(2)(3)(4)(5))
+
+
+
+// => use cases of currying function:- 
+
+// By the using of curring we can easily simplified event handling by creating reusable event handller function.
+
+// ex:- if there is muliple buttons , but perform similer actions with different parameter . There we are using currying function.
+
+// explanation :- 
+
+function eventHandllerfunctionOfMultipleButtons(parameter){
+     return function (e){
+          console.log("button is clicked by the parameter of :",parameter)    
+       }
+}
+document.getElementById("btn1").addEventListener("click", eventHandllerfunctionOfMultipleButtons("pr1"));
+document.getElementById("btn2").addEventListener("click", eventHandllerfunctionOfMultipleButtons("pr2"));
+document.getElementById("btn3").addEventListener("click", eventHandllerfunctionOfMultipleButtons("pr3"));
+
+</script>    
+</body>
+</html>
