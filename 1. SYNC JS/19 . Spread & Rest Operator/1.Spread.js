@@ -1,5 +1,9 @@
-// Spread Operator :- copies array element into another array or object.
-// Rest operator :- collecting all remaining parameters from functions
+// Spread Operator :- Spread operator is introduced in ES6 , which is expand(spread) iterable like array , object & string into individual element.
+
+// or # => Spread operator in js lets you spread element from an iterable object like an array , map & set.
+
+
+
 
 // ---> 1. using for making copy.
 

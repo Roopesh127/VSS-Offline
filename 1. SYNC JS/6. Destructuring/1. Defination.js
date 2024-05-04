@@ -1,0 +1,1 @@
+// Destructuring :- Destructuring is the way to extract data from array or object.
