@@ -1,6 +1,6 @@
 // map method
 
-// --> iterated over aray , applied on array one by one , return always new array
+// --> iterated over array , applied on array one by one , return always new array
 
 // let arr = [1,2,3,4,5,6,7,8,9]
 // const x = arr.map((r)=>r)
